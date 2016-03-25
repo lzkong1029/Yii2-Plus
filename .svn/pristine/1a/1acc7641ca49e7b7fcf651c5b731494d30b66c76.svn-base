@@ -1,0 +1,584 @@
+2016-03-08 17:52:54 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "index/index".' in D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('index/index', Array)
+#1 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpStudy\WWW\yii2xxx\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\phpStudy\WWW\yii2xxx\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-03-08 17:52:54 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/index'
+]
+
+$_COOKIE = [
+    'Huiskin' => 'default'
+    'CNZZDATA5952475' => 'cnzz_eid=52215994-1453271202-http%3A%2F%2F127.0.0.1%2F&ntime=1453271202'
+    'Hm_lvt_637f0fe043ea4b7f59c05d4491e27667' => '1453274296'
+    'CNZZDATA1254507623' => '1564759049-1452739657-|1453532844'
+    'Hm_lvt_dc0fe970e043c1980591d37dd0ad41c8' => '1456111412'
+    'CNZZDATA1257391351' => '1393648187-1454378946-|1456304963'
+    'Hm_lvt_080836300300be57b7f34f4b3e97d911' => '1456450635,1456715193'
+    '_pk_id_1_dc78' => '4c5e6b4f5ffbad41.1451358384.16.1456724271.1456717495.'
+    'CNZZDATA1702264' => 'cnzz_eid=1016688674-1457069463-&ntime=1457069463'
+    'TS4_TSV3_LOGGED_USER' => '129c119oUuw1hT2XeBurfV743z2EyprV'
+    'notice_5' => '1'
+    'CNZZDATA1254932726' => '1349814811-1457068498-http%3A%2F%2F127.0.0.1%2F|1457397300'
+    'schoolId' => 'eaa80f774ed65fdf6bb7b60e95883aa8fca2919bf11087f564eec5170c14f015a:2:{i:0;s:8:\"schoolId\";i:1;s:1:\"1\";}'
+    '_csrf' => 'aa7a8da6794c41b87574016aa25fa000626b56932b1e83a515e2eed87f73b42da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqGsQCypIpqMompAx1SjD9JZxszwSJC7\";}'
+    'PHPSESSID' => '2s8os1hahkbudqpm4ba9ku6pb1'
+    '_identity' => '7ed6e2d7da12b84c9076c70fd558c2950f5e80288e43914ea7b8fdfcc28d28a3a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[3,\"RNf5ZccKedYj8_07WTwh4_ud_uy2H2Rp\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://127.0.0.1/yii2xxx/backend/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4,en-GB;q=0.2'
+    'HTTP_COOKIE' => 'Huiskin=default; CNZZDATA5952475=cnzz_eid%3D52215994-1453271202-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1453271202; Hm_lvt_637f0fe043ea4b7f59c05d4491e27667=1453274296; CNZZDATA1254507623=1564759049-1452739657-%7C1453532844; Hm_lvt_dc0fe970e043c1980591d37dd0ad41c8=1456111412; CNZZDATA1257391351=1393648187-1454378946-%7C1456304963; Hm_lvt_080836300300be57b7f34f4b3e97d911=1456450635,1456715193; _pk_id.1.dc78=4c5e6b4f5ffbad41.1451358384.16.1456724271.1456717495.; CNZZDATA1702264=cnzz_eid%3D1016688674-1457069463-%26ntime%3D1457069463; TS4_TSV3_LOGGED_USER=129c119oUuw1hT2XeBurfV743z2EyprV; notice_5=1; CNZZDATA1254932726=1349814811-1457068498-http%253A%252F%252F127.0.0.1%252F%7C1457397300; schoolId=eaa80f774ed65fdf6bb7b60e95883aa8fca2919bf11087f564eec5170c14f015a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22schoolId%22%3Bi%3A1%3Bs%3A1%3A%221%22%3B%7D; _csrf=aa7a8da6794c41b87574016aa25fa000626b56932b1e83a515e2eed87f73b42da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqGsQCypIpqMompAx1SjD9JZxszwSJC7%22%3B%7D; PHPSESSID=2s8os1hahkbudqpm4ba9ku6pb1; _identity=7ed6e2d7da12b84c9076c70fd558c2950f5e80288e43914ea7b8fdfcc28d28a3a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22RNf5ZccKedYj8_07WTwh4_ud_uy2H2Rp%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\3.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\3.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;D:\\phpStudy\\php55;%CATALINA_HOME%\\bin;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Java\\jdk1.7.0_13\\bin;C:\\Python34\\python.exe;C:\\ProgramData\\ComposerSetup\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yii2xxx/backend/web/index.php'
+    'REMOTE_PORT' => '65228'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index%2Findex'
+    'REQUEST_URI' => '/yii2xxx/backend/web/index.php?r=index%2Findex'
+    'SCRIPT_NAME' => '/yii2xxx/backend/web/index.php'
+    'PHP_SELF' => '/yii2xxx/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1457430774.553
+    'REQUEST_TIME' => 1457430774
+]
+2016-03-08 17:55:51 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "index/index".' in D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('index/index', Array)
+#1 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpStudy\WWW\yii2xxx\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\phpStudy\WWW\yii2xxx\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-03-08 17:55:51 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/index'
+]
+
+$_COOKIE = [
+    'Huiskin' => 'default'
+    'CNZZDATA5952475' => 'cnzz_eid=52215994-1453271202-http%3A%2F%2F127.0.0.1%2F&ntime=1453271202'
+    'Hm_lvt_637f0fe043ea4b7f59c05d4491e27667' => '1453274296'
+    'CNZZDATA1254507623' => '1564759049-1452739657-|1453532844'
+    'Hm_lvt_dc0fe970e043c1980591d37dd0ad41c8' => '1456111412'
+    'CNZZDATA1257391351' => '1393648187-1454378946-|1456304963'
+    'Hm_lvt_080836300300be57b7f34f4b3e97d911' => '1456450635,1456715193'
+    '_pk_id_1_dc78' => '4c5e6b4f5ffbad41.1451358384.16.1456724271.1456717495.'
+    'CNZZDATA1702264' => 'cnzz_eid=1016688674-1457069463-&ntime=1457069463'
+    'TS4_TSV3_LOGGED_USER' => '129c119oUuw1hT2XeBurfV743z2EyprV'
+    'notice_5' => '1'
+    'CNZZDATA1254932726' => '1349814811-1457068498-http%3A%2F%2F127.0.0.1%2F|1457397300'
+    'schoolId' => 'eaa80f774ed65fdf6bb7b60e95883aa8fca2919bf11087f564eec5170c14f015a:2:{i:0;s:8:\"schoolId\";i:1;s:1:\"1\";}'
+    '_csrf' => 'aa7a8da6794c41b87574016aa25fa000626b56932b1e83a515e2eed87f73b42da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqGsQCypIpqMompAx1SjD9JZxszwSJC7\";}'
+    'PHPSESSID' => '2s8os1hahkbudqpm4ba9ku6pb1'
+    '_identity' => '7ed6e2d7da12b84c9076c70fd558c2950f5e80288e43914ea7b8fdfcc28d28a3a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[3,\"RNf5ZccKedYj8_07WTwh4_ud_uy2H2Rp\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://127.0.0.1/yii2xxx/backend/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4,en-GB;q=0.2'
+    'HTTP_COOKIE' => 'Huiskin=default; CNZZDATA5952475=cnzz_eid%3D52215994-1453271202-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1453271202; Hm_lvt_637f0fe043ea4b7f59c05d4491e27667=1453274296; CNZZDATA1254507623=1564759049-1452739657-%7C1453532844; Hm_lvt_dc0fe970e043c1980591d37dd0ad41c8=1456111412; CNZZDATA1257391351=1393648187-1454378946-%7C1456304963; Hm_lvt_080836300300be57b7f34f4b3e97d911=1456450635,1456715193; _pk_id.1.dc78=4c5e6b4f5ffbad41.1451358384.16.1456724271.1456717495.; CNZZDATA1702264=cnzz_eid%3D1016688674-1457069463-%26ntime%3D1457069463; TS4_TSV3_LOGGED_USER=129c119oUuw1hT2XeBurfV743z2EyprV; notice_5=1; CNZZDATA1254932726=1349814811-1457068498-http%253A%252F%252F127.0.0.1%252F%7C1457397300; schoolId=eaa80f774ed65fdf6bb7b60e95883aa8fca2919bf11087f564eec5170c14f015a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22schoolId%22%3Bi%3A1%3Bs%3A1%3A%221%22%3B%7D; _csrf=aa7a8da6794c41b87574016aa25fa000626b56932b1e83a515e2eed87f73b42da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqGsQCypIpqMompAx1SjD9JZxszwSJC7%22%3B%7D; PHPSESSID=2s8os1hahkbudqpm4ba9ku6pb1; _identity=7ed6e2d7da12b84c9076c70fd558c2950f5e80288e43914ea7b8fdfcc28d28a3a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22RNf5ZccKedYj8_07WTwh4_ud_uy2H2Rp%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\3.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\3.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;D:\\phpStudy\\php55;%CATALINA_HOME%\\bin;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Java\\jdk1.7.0_13\\bin;C:\\Python34\\python.exe;C:\\ProgramData\\ComposerSetup\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yii2xxx/backend/web/index.php'
+    'REMOTE_PORT' => '65287'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index%2Findex'
+    'REQUEST_URI' => '/yii2xxx/backend/web/index.php?r=index%2Findex'
+    'SCRIPT_NAME' => '/yii2xxx/backend/web/index.php'
+    'PHP_SELF' => '/yii2xxx/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1457430951.951
+    'REQUEST_TIME' => 1457430951
+]
+2016-03-08 17:56:13 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "index/index1".' in D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('index/index1', Array)
+#1 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpStudy\WWW\yii2xxx\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\phpStudy\WWW\yii2xxx\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-03-08 17:56:13 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/index1'
+]
+
+$_COOKIE = [
+    'Huiskin' => 'default'
+    'CNZZDATA5952475' => 'cnzz_eid=52215994-1453271202-http%3A%2F%2F127.0.0.1%2F&ntime=1453271202'
+    'Hm_lvt_637f0fe043ea4b7f59c05d4491e27667' => '1453274296'
+    'CNZZDATA1254507623' => '1564759049-1452739657-|1453532844'
+    'Hm_lvt_dc0fe970e043c1980591d37dd0ad41c8' => '1456111412'
+    'CNZZDATA1257391351' => '1393648187-1454378946-|1456304963'
+    'Hm_lvt_080836300300be57b7f34f4b3e97d911' => '1456450635,1456715193'
+    '_pk_id_1_dc78' => '4c5e6b4f5ffbad41.1451358384.16.1456724271.1456717495.'
+    'CNZZDATA1702264' => 'cnzz_eid=1016688674-1457069463-&ntime=1457069463'
+    'TS4_TSV3_LOGGED_USER' => '129c119oUuw1hT2XeBurfV743z2EyprV'
+    'notice_5' => '1'
+    'CNZZDATA1254932726' => '1349814811-1457068498-http%3A%2F%2F127.0.0.1%2F|1457397300'
+    'schoolId' => 'eaa80f774ed65fdf6bb7b60e95883aa8fca2919bf11087f564eec5170c14f015a:2:{i:0;s:8:\"schoolId\";i:1;s:1:\"1\";}'
+    '_csrf' => 'aa7a8da6794c41b87574016aa25fa000626b56932b1e83a515e2eed87f73b42da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqGsQCypIpqMompAx1SjD9JZxszwSJC7\";}'
+    'PHPSESSID' => '2s8os1hahkbudqpm4ba9ku6pb1'
+    '_identity' => '7ed6e2d7da12b84c9076c70fd558c2950f5e80288e43914ea7b8fdfcc28d28a3a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[3,\"RNf5ZccKedYj8_07WTwh4_ud_uy2H2Rp\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://127.0.0.1/yii2xxx/backend/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4,en-GB;q=0.2'
+    'HTTP_COOKIE' => 'Huiskin=default; CNZZDATA5952475=cnzz_eid%3D52215994-1453271202-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1453271202; Hm_lvt_637f0fe043ea4b7f59c05d4491e27667=1453274296; CNZZDATA1254507623=1564759049-1452739657-%7C1453532844; Hm_lvt_dc0fe970e043c1980591d37dd0ad41c8=1456111412; CNZZDATA1257391351=1393648187-1454378946-%7C1456304963; Hm_lvt_080836300300be57b7f34f4b3e97d911=1456450635,1456715193; _pk_id.1.dc78=4c5e6b4f5ffbad41.1451358384.16.1456724271.1456717495.; CNZZDATA1702264=cnzz_eid%3D1016688674-1457069463-%26ntime%3D1457069463; TS4_TSV3_LOGGED_USER=129c119oUuw1hT2XeBurfV743z2EyprV; notice_5=1; CNZZDATA1254932726=1349814811-1457068498-http%253A%252F%252F127.0.0.1%252F%7C1457397300; schoolId=eaa80f774ed65fdf6bb7b60e95883aa8fca2919bf11087f564eec5170c14f015a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22schoolId%22%3Bi%3A1%3Bs%3A1%3A%221%22%3B%7D; _csrf=aa7a8da6794c41b87574016aa25fa000626b56932b1e83a515e2eed87f73b42da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqGsQCypIpqMompAx1SjD9JZxszwSJC7%22%3B%7D; PHPSESSID=2s8os1hahkbudqpm4ba9ku6pb1; _identity=7ed6e2d7da12b84c9076c70fd558c2950f5e80288e43914ea7b8fdfcc28d28a3a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22RNf5ZccKedYj8_07WTwh4_ud_uy2H2Rp%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\3.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\3.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;D:\\phpStudy\\php55;%CATALINA_HOME%\\bin;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Java\\jdk1.7.0_13\\bin;C:\\Python34\\python.exe;C:\\ProgramData\\ComposerSetup\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yii2xxx/backend/web/index.php'
+    'REMOTE_PORT' => '65306'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index%2Findex1'
+    'REQUEST_URI' => '/yii2xxx/backend/web/index.php?r=index%2Findex1'
+    'SCRIPT_NAME' => '/yii2xxx/backend/web/index.php'
+    'PHP_SELF' => '/yii2xxx/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1457430973.299
+    'REQUEST_TIME' => 1457430973
+]
+2016-03-08 17:57:39 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "index/index1".' in D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('index/index1', Array)
+#1 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpStudy\WWW\yii2xxx\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\phpStudy\WWW\yii2xxx\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-03-08 17:57:39 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/index1'
+]
+
+$_COOKIE = [
+    'Huiskin' => 'default'
+    'CNZZDATA5952475' => 'cnzz_eid=52215994-1453271202-http%3A%2F%2F127.0.0.1%2F&ntime=1453271202'
+    'Hm_lvt_637f0fe043ea4b7f59c05d4491e27667' => '1453274296'
+    'CNZZDATA1254507623' => '1564759049-1452739657-|1453532844'
+    'Hm_lvt_dc0fe970e043c1980591d37dd0ad41c8' => '1456111412'
+    'CNZZDATA1257391351' => '1393648187-1454378946-|1456304963'
+    'Hm_lvt_080836300300be57b7f34f4b3e97d911' => '1456450635,1456715193'
+    '_pk_id_1_dc78' => '4c5e6b4f5ffbad41.1451358384.16.1456724271.1456717495.'
+    'CNZZDATA1702264' => 'cnzz_eid=1016688674-1457069463-&ntime=1457069463'
+    'TS4_TSV3_LOGGED_USER' => '129c119oUuw1hT2XeBurfV743z2EyprV'
+    'notice_5' => '1'
+    'CNZZDATA1254932726' => '1349814811-1457068498-http%3A%2F%2F127.0.0.1%2F|1457397300'
+    'schoolId' => 'eaa80f774ed65fdf6bb7b60e95883aa8fca2919bf11087f564eec5170c14f015a:2:{i:0;s:8:\"schoolId\";i:1;s:1:\"1\";}'
+    '_csrf' => 'aa7a8da6794c41b87574016aa25fa000626b56932b1e83a515e2eed87f73b42da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqGsQCypIpqMompAx1SjD9JZxszwSJC7\";}'
+    'PHPSESSID' => '2s8os1hahkbudqpm4ba9ku6pb1'
+    '_identity' => '7ed6e2d7da12b84c9076c70fd558c2950f5e80288e43914ea7b8fdfcc28d28a3a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[3,\"RNf5ZccKedYj8_07WTwh4_ud_uy2H2Rp\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://127.0.0.1/yii2xxx/backend/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4,en-GB;q=0.2'
+    'HTTP_COOKIE' => 'Huiskin=default; CNZZDATA5952475=cnzz_eid%3D52215994-1453271202-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1453271202; Hm_lvt_637f0fe043ea4b7f59c05d4491e27667=1453274296; CNZZDATA1254507623=1564759049-1452739657-%7C1453532844; Hm_lvt_dc0fe970e043c1980591d37dd0ad41c8=1456111412; CNZZDATA1257391351=1393648187-1454378946-%7C1456304963; Hm_lvt_080836300300be57b7f34f4b3e97d911=1456450635,1456715193; _pk_id.1.dc78=4c5e6b4f5ffbad41.1451358384.16.1456724271.1456717495.; CNZZDATA1702264=cnzz_eid%3D1016688674-1457069463-%26ntime%3D1457069463; TS4_TSV3_LOGGED_USER=129c119oUuw1hT2XeBurfV743z2EyprV; notice_5=1; CNZZDATA1254932726=1349814811-1457068498-http%253A%252F%252F127.0.0.1%252F%7C1457397300; schoolId=eaa80f774ed65fdf6bb7b60e95883aa8fca2919bf11087f564eec5170c14f015a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22schoolId%22%3Bi%3A1%3Bs%3A1%3A%221%22%3B%7D; _csrf=aa7a8da6794c41b87574016aa25fa000626b56932b1e83a515e2eed87f73b42da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqGsQCypIpqMompAx1SjD9JZxszwSJC7%22%3B%7D; PHPSESSID=2s8os1hahkbudqpm4ba9ku6pb1; _identity=7ed6e2d7da12b84c9076c70fd558c2950f5e80288e43914ea7b8fdfcc28d28a3a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22RNf5ZccKedYj8_07WTwh4_ud_uy2H2Rp%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\3.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\3.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;D:\\phpStudy\\php55;%CATALINA_HOME%\\bin;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Java\\jdk1.7.0_13\\bin;C:\\Python34\\python.exe;C:\\ProgramData\\ComposerSetup\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yii2xxx/backend/web/index.php'
+    'REMOTE_PORT' => '65344'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index%2Findex1'
+    'REQUEST_URI' => '/yii2xxx/backend/web/index.php?r=index%2Findex1'
+    'SCRIPT_NAME' => '/yii2xxx/backend/web/index.php'
+    'PHP_SELF' => '/yii2xxx/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1457431059.605
+    'REQUEST_TIME' => 1457431059
+]
+2016-03-08 17:57:43 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "index/index1".' in D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('index/index1', Array)
+#1 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpStudy\WWW\yii2xxx\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\phpStudy\WWW\yii2xxx\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-03-08 17:57:43 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/index1'
+]
+
+$_COOKIE = [
+    'Huiskin' => 'default'
+    'CNZZDATA5952475' => 'cnzz_eid=52215994-1453271202-http%3A%2F%2F127.0.0.1%2F&ntime=1453271202'
+    'Hm_lvt_637f0fe043ea4b7f59c05d4491e27667' => '1453274296'
+    'CNZZDATA1254507623' => '1564759049-1452739657-|1453532844'
+    'Hm_lvt_dc0fe970e043c1980591d37dd0ad41c8' => '1456111412'
+    'CNZZDATA1257391351' => '1393648187-1454378946-|1456304963'
+    'Hm_lvt_080836300300be57b7f34f4b3e97d911' => '1456450635,1456715193'
+    '_pk_id_1_dc78' => '4c5e6b4f5ffbad41.1451358384.16.1456724271.1456717495.'
+    'CNZZDATA1702264' => 'cnzz_eid=1016688674-1457069463-&ntime=1457069463'
+    'TS4_TSV3_LOGGED_USER' => '129c119oUuw1hT2XeBurfV743z2EyprV'
+    'notice_5' => '1'
+    'CNZZDATA1254932726' => '1349814811-1457068498-http%3A%2F%2F127.0.0.1%2F|1457397300'
+    'schoolId' => 'eaa80f774ed65fdf6bb7b60e95883aa8fca2919bf11087f564eec5170c14f015a:2:{i:0;s:8:\"schoolId\";i:1;s:1:\"1\";}'
+    '_csrf' => 'aa7a8da6794c41b87574016aa25fa000626b56932b1e83a515e2eed87f73b42da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqGsQCypIpqMompAx1SjD9JZxszwSJC7\";}'
+    'PHPSESSID' => '2s8os1hahkbudqpm4ba9ku6pb1'
+    '_identity' => '7ed6e2d7da12b84c9076c70fd558c2950f5e80288e43914ea7b8fdfcc28d28a3a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[3,\"RNf5ZccKedYj8_07WTwh4_ud_uy2H2Rp\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://127.0.0.1/yii2xxx/backend/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4,en-GB;q=0.2'
+    'HTTP_COOKIE' => 'Huiskin=default; CNZZDATA5952475=cnzz_eid%3D52215994-1453271202-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1453271202; Hm_lvt_637f0fe043ea4b7f59c05d4491e27667=1453274296; CNZZDATA1254507623=1564759049-1452739657-%7C1453532844; Hm_lvt_dc0fe970e043c1980591d37dd0ad41c8=1456111412; CNZZDATA1257391351=1393648187-1454378946-%7C1456304963; Hm_lvt_080836300300be57b7f34f4b3e97d911=1456450635,1456715193; _pk_id.1.dc78=4c5e6b4f5ffbad41.1451358384.16.1456724271.1456717495.; CNZZDATA1702264=cnzz_eid%3D1016688674-1457069463-%26ntime%3D1457069463; TS4_TSV3_LOGGED_USER=129c119oUuw1hT2XeBurfV743z2EyprV; notice_5=1; CNZZDATA1254932726=1349814811-1457068498-http%253A%252F%252F127.0.0.1%252F%7C1457397300; schoolId=eaa80f774ed65fdf6bb7b60e95883aa8fca2919bf11087f564eec5170c14f015a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22schoolId%22%3Bi%3A1%3Bs%3A1%3A%221%22%3B%7D; _csrf=aa7a8da6794c41b87574016aa25fa000626b56932b1e83a515e2eed87f73b42da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqGsQCypIpqMompAx1SjD9JZxszwSJC7%22%3B%7D; PHPSESSID=2s8os1hahkbudqpm4ba9ku6pb1; _identity=7ed6e2d7da12b84c9076c70fd558c2950f5e80288e43914ea7b8fdfcc28d28a3a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22RNf5ZccKedYj8_07WTwh4_ud_uy2H2Rp%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\3.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\3.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;D:\\phpStudy\\php55;%CATALINA_HOME%\\bin;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Java\\jdk1.7.0_13\\bin;C:\\Python34\\python.exe;C:\\ProgramData\\ComposerSetup\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yii2xxx/backend/web/index.php'
+    'REMOTE_PORT' => '65344'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index%2Findex1'
+    'REQUEST_URI' => '/yii2xxx/backend/web/index.php?r=index%2Findex1'
+    'SCRIPT_NAME' => '/yii2xxx/backend/web/index.php'
+    'PHP_SELF' => '/yii2xxx/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1457431063.119
+    'REQUEST_TIME' => 1457431063
+]
+2016-03-08 17:58:08 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "index/index1".' in D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('index/index1', Array)
+#1 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpStudy\WWW\yii2xxx\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\phpStudy\WWW\yii2xxx\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-03-08 17:58:08 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/index1'
+]
+
+$_COOKIE = [
+    'Huiskin' => 'default'
+    'CNZZDATA5952475' => 'cnzz_eid=52215994-1453271202-http%3A%2F%2F127.0.0.1%2F&ntime=1453271202'
+    'Hm_lvt_637f0fe043ea4b7f59c05d4491e27667' => '1453274296'
+    'CNZZDATA1254507623' => '1564759049-1452739657-|1453532844'
+    'Hm_lvt_dc0fe970e043c1980591d37dd0ad41c8' => '1456111412'
+    'CNZZDATA1257391351' => '1393648187-1454378946-|1456304963'
+    'Hm_lvt_080836300300be57b7f34f4b3e97d911' => '1456450635,1456715193'
+    '_pk_id_1_dc78' => '4c5e6b4f5ffbad41.1451358384.16.1456724271.1456717495.'
+    'CNZZDATA1702264' => 'cnzz_eid=1016688674-1457069463-&ntime=1457069463'
+    'TS4_TSV3_LOGGED_USER' => '129c119oUuw1hT2XeBurfV743z2EyprV'
+    'notice_5' => '1'
+    'CNZZDATA1254932726' => '1349814811-1457068498-http%3A%2F%2F127.0.0.1%2F|1457397300'
+    'schoolId' => 'eaa80f774ed65fdf6bb7b60e95883aa8fca2919bf11087f564eec5170c14f015a:2:{i:0;s:8:\"schoolId\";i:1;s:1:\"1\";}'
+    '_csrf' => 'aa7a8da6794c41b87574016aa25fa000626b56932b1e83a515e2eed87f73b42da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqGsQCypIpqMompAx1SjD9JZxszwSJC7\";}'
+    'PHPSESSID' => '2s8os1hahkbudqpm4ba9ku6pb1'
+    '_identity' => '7ed6e2d7da12b84c9076c70fd558c2950f5e80288e43914ea7b8fdfcc28d28a3a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[3,\"RNf5ZccKedYj8_07WTwh4_ud_uy2H2Rp\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://127.0.0.1/yii2xxx/backend/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4,en-GB;q=0.2'
+    'HTTP_COOKIE' => 'Huiskin=default; CNZZDATA5952475=cnzz_eid%3D52215994-1453271202-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1453271202; Hm_lvt_637f0fe043ea4b7f59c05d4491e27667=1453274296; CNZZDATA1254507623=1564759049-1452739657-%7C1453532844; Hm_lvt_dc0fe970e043c1980591d37dd0ad41c8=1456111412; CNZZDATA1257391351=1393648187-1454378946-%7C1456304963; Hm_lvt_080836300300be57b7f34f4b3e97d911=1456450635,1456715193; _pk_id.1.dc78=4c5e6b4f5ffbad41.1451358384.16.1456724271.1456717495.; CNZZDATA1702264=cnzz_eid%3D1016688674-1457069463-%26ntime%3D1457069463; TS4_TSV3_LOGGED_USER=129c119oUuw1hT2XeBurfV743z2EyprV; notice_5=1; CNZZDATA1254932726=1349814811-1457068498-http%253A%252F%252F127.0.0.1%252F%7C1457397300; schoolId=eaa80f774ed65fdf6bb7b60e95883aa8fca2919bf11087f564eec5170c14f015a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22schoolId%22%3Bi%3A1%3Bs%3A1%3A%221%22%3B%7D; _csrf=aa7a8da6794c41b87574016aa25fa000626b56932b1e83a515e2eed87f73b42da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqGsQCypIpqMompAx1SjD9JZxszwSJC7%22%3B%7D; PHPSESSID=2s8os1hahkbudqpm4ba9ku6pb1; _identity=7ed6e2d7da12b84c9076c70fd558c2950f5e80288e43914ea7b8fdfcc28d28a3a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22RNf5ZccKedYj8_07WTwh4_ud_uy2H2Rp%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\3.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\3.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;D:\\phpStudy\\php55;%CATALINA_HOME%\\bin;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Java\\jdk1.7.0_13\\bin;C:\\Python34\\python.exe;C:\\ProgramData\\ComposerSetup\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yii2xxx/backend/web/index.php'
+    'REMOTE_PORT' => '65356'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index%2Findex1'
+    'REQUEST_URI' => '/yii2xxx/backend/web/index.php?r=index%2Findex1'
+    'SCRIPT_NAME' => '/yii2xxx/backend/web/index.php'
+    'PHP_SELF' => '/yii2xxx/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1457431088.264
+    'REQUEST_TIME' => 1457431088
+]
+2016-03-08 17:58:13 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "index/index1".' in D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('index/index1', Array)
+#1 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpStudy\WWW\yii2xxx\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\phpStudy\WWW\yii2xxx\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-03-08 17:58:13 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/index1'
+]
+
+$_COOKIE = [
+    'Huiskin' => 'default'
+    'CNZZDATA5952475' => 'cnzz_eid=52215994-1453271202-http%3A%2F%2F127.0.0.1%2F&ntime=1453271202'
+    'Hm_lvt_637f0fe043ea4b7f59c05d4491e27667' => '1453274296'
+    'CNZZDATA1254507623' => '1564759049-1452739657-|1453532844'
+    'Hm_lvt_dc0fe970e043c1980591d37dd0ad41c8' => '1456111412'
+    'CNZZDATA1257391351' => '1393648187-1454378946-|1456304963'
+    'Hm_lvt_080836300300be57b7f34f4b3e97d911' => '1456450635,1456715193'
+    '_pk_id_1_dc78' => '4c5e6b4f5ffbad41.1451358384.16.1456724271.1456717495.'
+    'CNZZDATA1702264' => 'cnzz_eid=1016688674-1457069463-&ntime=1457069463'
+    'TS4_TSV3_LOGGED_USER' => '129c119oUuw1hT2XeBurfV743z2EyprV'
+    'notice_5' => '1'
+    'CNZZDATA1254932726' => '1349814811-1457068498-http%3A%2F%2F127.0.0.1%2F|1457397300'
+    'schoolId' => 'eaa80f774ed65fdf6bb7b60e95883aa8fca2919bf11087f564eec5170c14f015a:2:{i:0;s:8:\"schoolId\";i:1;s:1:\"1\";}'
+    '_csrf' => 'aa7a8da6794c41b87574016aa25fa000626b56932b1e83a515e2eed87f73b42da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqGsQCypIpqMompAx1SjD9JZxszwSJC7\";}'
+    'PHPSESSID' => '2s8os1hahkbudqpm4ba9ku6pb1'
+    '_identity' => '7ed6e2d7da12b84c9076c70fd558c2950f5e80288e43914ea7b8fdfcc28d28a3a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[3,\"RNf5ZccKedYj8_07WTwh4_ud_uy2H2Rp\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://127.0.0.1/yii2xxx/backend/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4,en-GB;q=0.2'
+    'HTTP_COOKIE' => 'Huiskin=default; CNZZDATA5952475=cnzz_eid%3D52215994-1453271202-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1453271202; Hm_lvt_637f0fe043ea4b7f59c05d4491e27667=1453274296; CNZZDATA1254507623=1564759049-1452739657-%7C1453532844; Hm_lvt_dc0fe970e043c1980591d37dd0ad41c8=1456111412; CNZZDATA1257391351=1393648187-1454378946-%7C1456304963; Hm_lvt_080836300300be57b7f34f4b3e97d911=1456450635,1456715193; _pk_id.1.dc78=4c5e6b4f5ffbad41.1451358384.16.1456724271.1456717495.; CNZZDATA1702264=cnzz_eid%3D1016688674-1457069463-%26ntime%3D1457069463; TS4_TSV3_LOGGED_USER=129c119oUuw1hT2XeBurfV743z2EyprV; notice_5=1; CNZZDATA1254932726=1349814811-1457068498-http%253A%252F%252F127.0.0.1%252F%7C1457397300; schoolId=eaa80f774ed65fdf6bb7b60e95883aa8fca2919bf11087f564eec5170c14f015a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22schoolId%22%3Bi%3A1%3Bs%3A1%3A%221%22%3B%7D; _csrf=aa7a8da6794c41b87574016aa25fa000626b56932b1e83a515e2eed87f73b42da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqGsQCypIpqMompAx1SjD9JZxszwSJC7%22%3B%7D; PHPSESSID=2s8os1hahkbudqpm4ba9ku6pb1; _identity=7ed6e2d7da12b84c9076c70fd558c2950f5e80288e43914ea7b8fdfcc28d28a3a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22RNf5ZccKedYj8_07WTwh4_ud_uy2H2Rp%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\3.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\3.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;D:\\phpStudy\\php55;%CATALINA_HOME%\\bin;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Java\\jdk1.7.0_13\\bin;C:\\Python34\\python.exe;C:\\ProgramData\\ComposerSetup\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yii2xxx/backend/web/index.php'
+    'REMOTE_PORT' => '65361'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index%2Findex1'
+    'REQUEST_URI' => '/yii2xxx/backend/web/index.php?r=index%2Findex1'
+    'SCRIPT_NAME' => '/yii2xxx/backend/web/index.php'
+    'PHP_SELF' => '/yii2xxx/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1457431093.476
+    'REQUEST_TIME' => 1457431093
+]
+2016-03-08 17:58:52 [127.0.0.1][-][-][error][yii\web\HttpException:404] exception 'yii\base\InvalidRouteException' with message 'Unable to resolve the request "index/indexlist".' in D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\base\Module.php:460
+Stack trace:
+#0 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\web\Application.php(84): yii\base\Module->runAction('index/indexlist', Array)
+#1 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#2 D:\phpStudy\WWW\yii2xxx\backend\web\index.php(18): yii\base\Application->run()
+#3 {main}
+
+Next exception 'yii\web\NotFoundHttpException' with message 'Page not found.' in D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\web\Application.php:96
+Stack trace:
+#0 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#1 D:\phpStudy\WWW\yii2xxx\backend\web\index.php(18): yii\base\Application->run()
+#2 {main}
+2016-03-08 17:58:52 [127.0.0.1][-][-][info][application] $_GET = [
+    'r' => 'index/indexlist'
+]
+
+$_COOKIE = [
+    'Huiskin' => 'default'
+    'CNZZDATA5952475' => 'cnzz_eid=52215994-1453271202-http%3A%2F%2F127.0.0.1%2F&ntime=1453271202'
+    'Hm_lvt_637f0fe043ea4b7f59c05d4491e27667' => '1453274296'
+    'CNZZDATA1254507623' => '1564759049-1452739657-|1453532844'
+    'Hm_lvt_dc0fe970e043c1980591d37dd0ad41c8' => '1456111412'
+    'CNZZDATA1257391351' => '1393648187-1454378946-|1456304963'
+    'Hm_lvt_080836300300be57b7f34f4b3e97d911' => '1456450635,1456715193'
+    '_pk_id_1_dc78' => '4c5e6b4f5ffbad41.1451358384.16.1456724271.1456717495.'
+    'CNZZDATA1702264' => 'cnzz_eid=1016688674-1457069463-&ntime=1457069463'
+    'TS4_TSV3_LOGGED_USER' => '129c119oUuw1hT2XeBurfV743z2EyprV'
+    'notice_5' => '1'
+    'CNZZDATA1254932726' => '1349814811-1457068498-http%3A%2F%2F127.0.0.1%2F|1457397300'
+    'schoolId' => 'eaa80f774ed65fdf6bb7b60e95883aa8fca2919bf11087f564eec5170c14f015a:2:{i:0;s:8:\"schoolId\";i:1;s:1:\"1\";}'
+    '_csrf' => 'aa7a8da6794c41b87574016aa25fa000626b56932b1e83a515e2eed87f73b42da:2:{i:0;s:5:\"_csrf\";i:1;s:32:\"AqGsQCypIpqMompAx1SjD9JZxszwSJC7\";}'
+    'PHPSESSID' => '2s8os1hahkbudqpm4ba9ku6pb1'
+    '_identity' => '7ed6e2d7da12b84c9076c70fd558c2950f5e80288e43914ea7b8fdfcc28d28a3a:2:{i:0;s:9:\"_identity\";i:1;s:46:\"[3,\"RNf5ZccKedYj8_07WTwh4_ud_uy2H2Rp\",2592000]\";}'
+]
+
+$_SERVER = [
+    'HTTP_HOST' => '127.0.0.1'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.116 Safari/537.36'
+    'HTTP_REFERER' => 'http://127.0.0.1/yii2xxx/backend/web/'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate, sdch'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en-US;q=0.6,en;q=0.4,en-GB;q=0.2'
+    'HTTP_COOKIE' => 'Huiskin=default; CNZZDATA5952475=cnzz_eid%3D52215994-1453271202-http%253A%252F%252F127.0.0.1%252F%26ntime%3D1453271202; Hm_lvt_637f0fe043ea4b7f59c05d4491e27667=1453274296; CNZZDATA1254507623=1564759049-1452739657-%7C1453532844; Hm_lvt_dc0fe970e043c1980591d37dd0ad41c8=1456111412; CNZZDATA1257391351=1393648187-1454378946-%7C1456304963; Hm_lvt_080836300300be57b7f34f4b3e97d911=1456450635,1456715193; _pk_id.1.dc78=4c5e6b4f5ffbad41.1451358384.16.1456724271.1456717495.; CNZZDATA1702264=cnzz_eid%3D1016688674-1457069463-%26ntime%3D1457069463; TS4_TSV3_LOGGED_USER=129c119oUuw1hT2XeBurfV743z2EyprV; notice_5=1; CNZZDATA1254932726=1349814811-1457068498-http%253A%252F%252F127.0.0.1%252F%7C1457397300; schoolId=eaa80f774ed65fdf6bb7b60e95883aa8fca2919bf11087f564eec5170c14f015a%3A2%3A%7Bi%3A0%3Bs%3A8%3A%22schoolId%22%3Bi%3A1%3Bs%3A1%3A%221%22%3B%7D; _csrf=aa7a8da6794c41b87574016aa25fa000626b56932b1e83a515e2eed87f73b42da%3A2%3A%7Bi%3A0%3Bs%3A5%3A%22_csrf%22%3Bi%3A1%3Bs%3A32%3A%22AqGsQCypIpqMompAx1SjD9JZxszwSJC7%22%3B%7D; PHPSESSID=2s8os1hahkbudqpm4ba9ku6pb1; _identity=7ed6e2d7da12b84c9076c70fd558c2950f5e80288e43914ea7b8fdfcc28d28a3a%3A2%3A%7Bi%3A0%3Bs%3A9%3A%22_identity%22%3Bi%3A1%3Bs%3A46%3A%22%5B3%2C%22RNf5ZccKedYj8_07WTwh4_ud_uy2H2Rp%22%2C2592000%5D%22%3B%7D'
+    'PATH' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\3.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\3.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;D:\\phpStudy\\php55;%CATALINA_HOME%\\bin;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Java\\jdk1.7.0_13\\bin;C:\\Python34\\python.exe;C:\\ProgramData\\ComposerSetup\\bin;'
+    'SystemRoot' => 'C:\\Windows'
+    'COMSPEC' => 'C:\\Windows\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\Windows'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.18 (Win32) OpenSSL/1.0.2e PHP/5.5.30'
+    'SERVER_NAME' => '127.0.0.1'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'D:/phpStudy/WWW'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'D:/phpStudy/WWW'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'D:/phpStudy/WWW/yii2xxx/backend/web/index.php'
+    'REMOTE_PORT' => '65382'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => 'r=index%2Findexlist'
+    'REQUEST_URI' => '/yii2xxx/backend/web/index.php?r=index%2Findexlist'
+    'SCRIPT_NAME' => '/yii2xxx/backend/web/index.php'
+    'PHP_SELF' => '/yii2xxx/backend/web/index.php'
+    'REQUEST_TIME_FLOAT' => 1457431132.873
+    'REQUEST_TIME' => 1457431132
+]

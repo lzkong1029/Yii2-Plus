@@ -1,0 +1,38 @@
+<?php
+
+use yii\helpers\Html;
+
+
+/* @var $this yii\web\View */
+/* @var $model backend\models\AuthItemChild */
+
+$this->title = '配置权限';
+$this->params['breadcrumbs'][] = ['label' => 'Auth Item Children', 'url' => ['index']];
+$this->params['breadcrumbs'][] = $this->title;
+?>
+<div class="wrapper wrapper-content">
+
+    <h1><?= Html::encode($this->title) ?></h1>
+    <?php foreach($items as $v):?>
+        <label><input type="checkbox" class="chk" name="per[]" value="<?=$v['name']?>"><?=$v['name']?></label>
+    <?php endforeach;?>
+    <?/*= $this->render('_form', [
+        'model' => $model,
+    ]) */?>
+
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        var permission = <?= json_encode($Permission);?>;
+        $('.chk').each(function(){
+            var self = $(this);
+            var selfVal = self.val();
+            //console.log(selfVal);
+            $.each(permission, function(n, v){
+                console.log(v.child);
+                if(v == selfVal) self.attr('checked' , 'true');
+            });
+        });
+
+    });
+</script>

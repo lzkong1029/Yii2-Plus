@@ -1,0 +1,112 @@
+2016-03-08 16:49:43 [-][-][-][error][yii\db\Exception] exception 'PDOException' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'user' already exists' in D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\db\Command.php:784
+Stack trace:
+#0 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\db\Command.php(784): PDOStatement->execute()
+#1 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\db\Migration.php(260): yii\db\Command->execute()
+#2 D:\phpStudy\WWW\yii2xxx\console\migrations\m130524_201442_init.php(26): yii\db\Migration->createTable('{{%user}}', Array, 'CHARACTER SET u...')
+#3 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(562): m130524_201442_init->up()
+#4 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(151): yii\console\controllers\BaseMigrateController->migrateUp('m130524_201442_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#8 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('', Array)
+#9 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('', Array)
+#10 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\console\Application.php(167): yii\base\Module->runAction('migrate', Array)
+#11 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\console\Application.php(143): yii\console\Application->runAction('migrate', Array)
+#12 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 D:\phpStudy\WWW\yii2xxx\yii(27): yii\base\Application->run()
+#14 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[42S01]: Base table or view already exists: 1050 Table 'user' already exists
+The SQL being executed was: CREATE TABLE `user` (
+	`id` int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`username` varchar(255) NOT NULL UNIQUE,
+	`auth_key` varchar(32) NOT NULL,
+	`password_hash` varchar(255) NOT NULL,
+	`password_reset_token` varchar(255) UNIQUE,
+	`email` varchar(255) NOT NULL UNIQUE,
+	`status` smallint(6) NOT NULL DEFAULT 10,
+	`created_at` int(11) NOT NULL,
+	`updated_at` int(11) NOT NULL
+) CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE=InnoDB' in D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\db\Schema.php:628
+Stack trace:
+#0 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\db\Command.php(794): yii\db\Schema->convertException(Object(PDOException), 'CREATE TABLE `u...')
+#1 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\db\Migration.php(260): yii\db\Command->execute()
+#2 D:\phpStudy\WWW\yii2xxx\console\migrations\m130524_201442_init.php(26): yii\db\Migration->createTable('{{%user}}', Array, 'CHARACTER SET u...')
+#3 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(562): m130524_201442_init->up()
+#4 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\console\controllers\BaseMigrateController.php(151): yii\console\controllers\BaseMigrateController->migrateUp('m130524_201442_...')
+#5 [internal function]: yii\console\controllers\BaseMigrateController->actionUp(0)
+#6 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array(Array, Array)
+#7 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams(Array)
+#8 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\console\Controller.php(119): yii\base\Controller->runAction('', Array)
+#9 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\base\Module.php(454): yii\console\Controller->runAction('', Array)
+#10 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\console\Application.php(167): yii\base\Module->runAction('migrate', Array)
+#11 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\console\Application.php(143): yii\console\Application->runAction('migrate', Array)
+#12 D:\phpStudy\WWW\yii2xxx\vendor\yiisoft\yii2\base\Application.php(375): yii\console\Application->handleRequest(Object(yii\console\Request))
+#13 D:\phpStudy\WWW\yii2xxx\yii(27): yii\base\Application->run()
+#14 {main}
+Additional Information:
+Array
+(
+    [0] => 42S01
+    [1] => 1050
+    [2] => Table 'user' already exists
+)
+
+2016-03-08 16:49:38 [-][-][-][info][application] $_SERVER = [
+    'ALLUSERSPROFILE' => 'C:\\ProgramData'
+    'APPDATA' => 'C:\\Users\\Administrator\\AppData\\Roaming'
+    'CLASSPATH' => '.;C:\\Program Files\\Java\\jdk1.7.0_13\\lib\\dt.jar;C:\\Program Files\\Java\\jdk1.7.0_13\\lib\\tools.jar;'
+    'CommonProgramFiles' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramFiles(x86)' => 'C:\\Program Files (x86)\\Common Files'
+    'CommonProgramW6432' => 'C:\\Program Files\\Common Files'
+    'COMPUTERNAME' => 'SZ15082284'
+    'ComSpec' => 'C:\\Windows\\system32\\cmd.exe'
+    'FP_NO_HOST_CHECK' => 'NO'
+    'HOMEDRIVE' => 'C:'
+    'HOMEPATH' => '\\Users\\Administrator'
+    'JAVA_HOME' => 'C:\\Program Files\\Java\\jdk1.7.0_13'
+    'LOCALAPPDATA' => 'C:\\Users\\Administrator\\AppData\\Local'
+    'LOGONSERVER' => '\\\\SZ15082284'
+    'NUMBER_OF_PROCESSORS' => '4'
+    'OS' => 'Windows_NT'
+    'Path' => 'C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\3.0\\bin\\x86;C:\\Program Files (x86)\\Intel\\OpenCL SDK\\3.0\\bin\\x64;C:\\Program Files\\TortoiseSVN\\bin;D:\\phpStudy\\php55;%CATALINA_HOME%\\bin;C:\\Program Files\\TortoiseGit\\bin;C:\\Program Files\\Java\\jdk1.7.0_13\\bin;C:\\Python34\\python.exe;C:\\ProgramData\\ComposerSetup\\bin;C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python35-32\\Scripts\\;C:\\Users\\Administrator\\AppData\\Local\\Programs\\Python\\Python35-32\\'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'PHP_COMMAND' => 'php.exe'
+    'PROCESSOR_ARCHITECTURE' => 'x86'
+    'PROCESSOR_ARCHITEW6432' => 'AMD64'
+    'PROCESSOR_IDENTIFIER' => 'Intel64 Family 6 Model 60 Stepping 3, GenuineIntel'
+    'PROCESSOR_LEVEL' => '6'
+    'PROCESSOR_REVISION' => '3c03'
+    'ProgramData' => 'C:\\ProgramData'
+    'ProgramFiles' => 'C:\\Program Files (x86)'
+    'ProgramFiles(x86)' => 'C:\\Program Files (x86)'
+    'ProgramW6432' => 'C:\\Program Files'
+    'PROMPT' => '$P$G'
+    'PSModulePath' => 'C:\\Windows\\system32\\WindowsPowerShell\\v1.0\\Modules\\'
+    'PUBLIC' => 'C:\\Users\\Public'
+    'SESSIONNAME' => 'Console'
+    'SystemDrive' => 'C:'
+    'SystemRoot' => 'C:\\Windows'
+    'TEMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TMP' => 'C:\\Users\\ADMINI~1\\AppData\\Local\\Temp'
+    'TOMCAT_HOME' => 'C:\\Program Files (x86)\\Atlassian\\JIRA'
+    'USERDOMAIN' => 'SZ15082284'
+    'USERNAME' => 'Administrator'
+    'USERPROFILE' => 'C:\\Users\\Administrator'
+    'windir' => 'C:\\Windows'
+    'windows_tracing_flags' => '3'
+    'windows_tracing_logfile' => 'C:\\BVTBin\\Tests\\installpackage\\csilogfile.log'
+    'YII_PATH' => 'D:\\phpStudy\\WWW\\yii2xxx\\'
+    'PHP_SELF' => 'D:\\phpStudy\\WWW\\yii2xxx\\yii'
+    'SCRIPT_NAME' => 'D:\\phpStudy\\WWW\\yii2xxx\\yii'
+    'SCRIPT_FILENAME' => 'D:\\phpStudy\\WWW\\yii2xxx\\yii'
+    'PATH_TRANSLATED' => 'D:\\phpStudy\\WWW\\yii2xxx\\yii'
+    'DOCUMENT_ROOT' => ''
+    'REQUEST_TIME_FLOAT' => 1457426978.718
+    'REQUEST_TIME' => 1457426978
+    'argv' => [
+        0 => 'D:\\phpStudy\\WWW\\yii2xxx\\yii'
+        1 => 'migrate'
+    ]
+    'argc' => 2
+]

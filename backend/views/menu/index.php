@@ -35,7 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         'headerOptions' => ['width' => '240'],
                         'buttons' => [
                             'delete' => function($url, $model, $key){
-                                return Html::a('<i class="fa fa-ban"></i> 删除',
+                                return Html::a('<i class="fa fa-close"></i> 删除',
                                     ['delete', 'id' => $key],
                                     [
                                         'class' => 'btn btn-default btn-xs',
@@ -44,7 +44,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                 );
                             },
                             'update' => function($url, $model, $key){
-                                return Html::a('<i class="fa fa-gear"></i> 编辑',
+                                return Html::a('<i class="fa fa-edit"></i> 编辑',
                                     ['update', 'id' => $key],
                                     [
                                         'class' => 'btn btn-primary btn-xs'

@@ -57,7 +57,6 @@ class ItemController extends Controller
         $value = Yii:: $app-> request->get( 'value', '');
         $search = ($type&&$value)?[ 'like',$type,$value]: '';
         //查询语句
-        //$query = $model->find()->orderBy( 'created_at DESC');
         $query = $model->find()->where(['type'=>1])->orderBy( 'created_at DESC');  //列表只显示角色
         $data = $model->getPages($query,$curPage,$pageSize,$search);
         $pages = new Pagination([ 'totalCount' =>$data[ 'count'], 'pageSize' => $pageSize]);

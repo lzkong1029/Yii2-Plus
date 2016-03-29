@@ -14,18 +14,33 @@ $this->params['breadcrumbs'][] = $this->title;
 
     <h1><?= Html::encode($this->title) ?></h1>
     <hr>
-    <form action="<?=Url::toRoute(['permission/set','id'=>$id])?>" method="post">
-        <input name="parent" type="hidden" value="<?=$id?>">
-        <label><input type="checkbox" class="chkall" name="checkall" value="1">全选</label>&nbsp;&nbsp;
+    <div class="row">
+        <form action="<?=Url::toRoute(['permission/set','id'=>$id])?>" method="post">
+        <?php foreach($menu as $vo):?>
+            <div class="col-md-6">
+            <h3><?= $vo->name?></h3>
+            <!--<hr>-->
+            <input name="parent" type="hidden" value="<?=$id?>">
+            <!--<label><input type="checkbox" class="chkall" name="checkall" value="1">全选</label>&nbsp;&nbsp;-->
 
-        <?php foreach($items as $v):?>
-            <label><input type="checkbox" class="chk" name="permission[]" value="<?=$v->name?>"><?=$v->name?></label>&nbsp;&nbsp;
+            <?php foreach($items as $v):?>
+                <?php if($vo['id'] == $v->permissionName['parent']):?>
+                    <label><input type="checkbox" class="chk" name="permission[]" value="<?=$v->name?>"><?=($v->permissionName['name'] ==''? $v->name : $v->permissionName['name'])?></label>&nbsp;&nbsp;
+                <?php endif;?>
+            <?php endforeach;?>
+            </div>
         <?php endforeach;?>
-        <br>
-        <br>
-        <br>
-        <input type="submit" value="保存" class="btn btn-primary">
-    </form>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            <input type="submit" value="保存" class="btn btn-primary">
+        </form>
+    </div>
 
 
 </div>

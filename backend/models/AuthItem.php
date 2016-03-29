@@ -4,6 +4,8 @@ namespace backend\models;
 
 use Yii;
 use common\models\base\BaseModel;
+use backend\models\Menu;
+
 /**
  * This is the model class for table "auth_item".
  *
@@ -201,9 +203,15 @@ class AuthItem extends BaseModel
         }
         return $auth->update($item_name, $item);
     }
+
     //获取所有的权限
     public function getAllPermission(){
         $permission = self::find()->where(['type'=>2])->all();
         return $permission;
+    }
+
+    //关联菜单数据
+    public function getPermissionName(){
+        return $this->hasOne(Menu::className(), ['route' => 'name']);
     }
 }

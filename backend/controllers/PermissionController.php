@@ -3,6 +3,7 @@
 namespace backend\controllers;
 
 use backend\models\AuthItem;
+use backend\models\Menu;
 use Yii;
 use backend\models\AuthItemChild;
 use yii\data\ActiveDataProvider;
@@ -43,7 +44,11 @@ class PermissionController extends Controller
     {
         $auth = Yii::$app->authManager;
         $Permission = $auth->getPermissionsByRole($id);
-        $items = $auth->getPermissions();
+        //$items = $auth->getPermissions();
+        $items = AuthItem::find()->joinWith('permissionName')->where(['type' => '2'])->all();
+        $menu = Menu::find()->where(['parent'=>'0'])->all();
+
+        //var_dump($items,$menu);exit;
 
         if (Yii::$app->request->post()) {
             $post = Yii::$app->request->post();
@@ -62,7 +67,8 @@ class PermissionController extends Controller
             return $this->render('set', [
                 'Permission' => $Permission,
                 'items'=>$items,
-                'id'=>$id
+                'id'=>$id,
+                'menu' =>$menu
             ]);
         }
     }

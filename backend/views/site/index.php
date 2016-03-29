@@ -68,7 +68,7 @@ $this->title = 'Y+';
                     <li>
                         <a href="#">
                             <i class="fa fa fa-bar-chart-o"></i>
-                            <span class="nav-label">用户管理</span>
+                            <span class="nav-label">系统管理</span>
                             <span class="fa arrow"></span>
                         </a>
                         <ul class="nav nav-second-level">

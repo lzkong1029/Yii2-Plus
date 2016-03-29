@@ -58,4 +58,11 @@ class Menu extends \yii\db\ActiveRecord
         $menu = Yii::$app->db->createCommand("SELECT * FROM `menu` WHERE parent='0'")->queryAll();
         return $menu;
     }
+
+    //通过id找到router
+    public function getRouteById($id){
+        $router = Yii::$app->db->createCommand("SELECT * FROM `menu` WHERE id='$id'")->queryOne();
+        return $router['route'];
+    }
+
 }

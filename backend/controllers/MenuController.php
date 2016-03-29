@@ -8,7 +8,7 @@ use yii\data\ActiveDataProvider;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
-
+use backend\models\AuthItem;
 /**
  * MenuController implements the CRUD actions for Menu model.
  */
@@ -23,7 +23,7 @@ class MenuController extends Controller
             'verbs' => [
                 'class' => VerbFilter::className(),
                 'actions' => [
-                    'delete' => ['POST'],
+                    'delete' => ['GET'],
                 ],
             ],
         ];
@@ -121,8 +121,18 @@ class MenuController extends Controller
      */
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+        //通过id找到router
+        $MenuModel = new Menu();
+        $name = $MenuModel->getRouteById($id);
+        //删除菜单同时删除权限
+        if(!empty($name)){
+            $model = new AuthItem();
+            $model->setScenario(AuthItem:: SCENARIOS_DELETE);
+            $model-> name = $name;
+            $res =  $model->romoveItem();
+        }
 
+        $this->findModel($id)->delete();
         return $this->redirect(['index']);
     }
 
@@ -141,4 +151,8 @@ class MenuController extends Controller
             throw new NotFoundHttpException('The requested page does not exist.');
         }
     }
+
+
+
+
 }

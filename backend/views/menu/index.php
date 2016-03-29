@@ -28,7 +28,33 @@ $this->params['breadcrumbs'][] = $this->title;
                     'order',
                     // 'data:ntext',
 
-                    ['class' => 'yii\grid\ActionColumn'],
+                    [
+                        'class' => 'yii\grid\ActionColumn',
+                        'header' => '操作',
+                        'template' => '{update} {delete}',//只需要展示删除和更新
+                        'headerOptions' => ['width' => '240'],
+                        'buttons' => [
+                            'delete' => function($url, $model, $key){
+                                return Html::a('<i class="fa fa-ban"></i> 删除',
+                                    ['delete', 'id' => $key],
+                                    [
+                                        'class' => 'btn btn-default btn-xs',
+                                        'data' => ['confirm' => '你确定要删除吗？',]
+                                    ]
+                                );
+                            },
+                            'update' => function($url, $model, $key){
+                                return Html::a('<i class="fa fa-gear"></i> 编辑',
+                                    ['update', 'id' => $key],
+                                    [
+                                        'class' => 'btn btn-primary btn-xs'
+                                    ]
+                                );
+                            },
+                        ],
+                    ],
+
+
                 ],
             ]); ?>
         </div>

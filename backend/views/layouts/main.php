@@ -34,6 +34,8 @@ use common\widgets\Alert;
     <link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
     <link href="css/animate.min.css" rel="stylesheet">
     <link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <link href="css/site.css" rel="stylesheet">
+
 
     <script src="js/jquery.min.js"></script>
     <?php $this->head() ?>

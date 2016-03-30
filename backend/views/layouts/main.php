@@ -38,7 +38,7 @@ use common\widgets\Alert;
     <script src="js/jquery.min.js"></script>
     <?php $this->head() ?>
 </head>
-<body class="fixed-sidebar full-height-layout gray-bg" style="overflow:hidden">
+<body class="fixed-sidebar full-height-layout gray-bg">
 <?php $this->beginBody() ?>
 <?= $content ?>
 <?php $this->endBody() ?>

@@ -88,7 +88,8 @@ class MenuController extends Controller
                 $createPost->description = '创建了[' . $name. ']权限';
                 $auth->add($createPost);
             }
-            return $this->redirect(['view', 'id' => $model->id]);
+            //return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index']);
         } else {
             return $this->render('create', [
                 'model' => $model,

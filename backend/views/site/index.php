@@ -47,19 +47,7 @@ $this->title = 'Y+';
                         </a>
                         <ul class="nav nav-second-level">
                             <li>
-                                <a class="J_menuItem" href="<?= Url::toRoute('index/index');?>" data-index="0">主页示例一</a>
-                            </li>
-                            <li>
-                                <a class="J_menuItem" href="<?= Url::toRoute('index/index');?>">主页示例二</a>
-                            </li>
-                            <li>
-                                <a class="J_menuItem" href="<?= Url::toRoute('index/index');?>">主页示例三</a>
-                            </li>
-                            <li>
-                                <a class="J_menuItem" href="<?= Url::toRoute('index/index');?>">主页示例四</a>
-                            </li>
-                            <li>
-                                <a href="<?= Url::toRoute('index/index');?>" target="_blank">主页示例五</a>
+                                <a class="J_menuItem" href="<?= Url::toRoute('index/index1');?>" data-index="0">主页示例一</a>
                             </li>
                         </ul>
 

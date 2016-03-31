@@ -53,9 +53,15 @@ class Menu extends \yii\db\ActiveRecord
         ];
     }
 
-    //获取所有菜单
+    //获取顶级菜单列表
     public function  getAllMenu(){
         $menu = Yii::$app->db->createCommand("SELECT * FROM `menu` WHERE parent='0'")->queryAll();
+        return $menu;
+    }
+    //获取所有菜单列表
+    public function  getMenuList(){
+        $menu = Yii::$app->db->createCommand("SELECT * FROM `menu`")->queryAll();
+        $menu = $this->list_to_tree($menu,'id','parent');
         return $menu;
     }
 
@@ -64,5 +70,6 @@ class Menu extends \yii\db\ActiveRecord
         $router = Yii::$app->db->createCommand("SELECT * FROM `menu` WHERE id='$id'")->queryOne();
         return $router['route'];
     }
+
 
 }

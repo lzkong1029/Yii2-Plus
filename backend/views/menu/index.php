@@ -25,7 +25,6 @@ $this->params['breadcrumbs'][] = $this->title;
                                 <table class="table table-striped">
                                     <thead>
                                     <tr>
-
                                         <th>ID</th>
                                         <th>名称</th>
                                         <th>父级</th>
@@ -43,7 +42,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                             <td><?=$vo['parent']?></td>
                                             <td><?=$vo['route']?></td>
                                             <td><?=($vo['order']==''?'未排序':$vo['order'])?></td>
-                                            <td><a class="btn btn-primary btn-xs" href="<?=Url::toRoute(['menu/update','id'=>$vo['id']])?>"><i class="fa fa-edit"></i>编辑</a> | <a class="btn btn-default btn-xs"  href="<?=Url::toRoute(['menu/delete','id'=>$vo['id']])?>"><i class="fa fa-close"></i>删除</a></td>
+                                            <td><a class="btn btn-primary btn-xs" href="<?=Url::toRoute(['menu/update','id'=>$vo['id']])?>"><i class="fa fa-edit"></i>编辑</a>  <a class="btn btn-default btn-xs"  href="<?=Url::toRoute(['menu/delete','id'=>$vo['id']])?>"><i class="fa fa-close"></i>删除</a></td>
                                         </tr>
                                         <?php if(!empty($vo['_child'])):?>
                                             <?php foreach($vo['_child'] as $v):?>
@@ -54,7 +53,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                                 <td><?=$v['route']?></td>
                                                 <td><?=($v['order']==''?'未排序':$v['order'])?></td>
 
-                                                <td><a class="btn btn-primary btn-xs" href="<?=Url::toRoute(['menu/update','id'=>$v['id']])?>"><i class="fa fa-edit"></i>编辑</a> | <a class="btn btn-default btn-xs" href="<?=Url::toRoute(['menu/delete','id'=>$v['id']])?>"><i class="fa fa-close"></i>删除</a></td>
+                                                <td><a class="btn btn-primary btn-xs" href="<?=Url::toRoute(['menu/update','id'=>$v['id']])?>"><i class="fa fa-edit"></i>编辑</a>  <a class="btn btn-default btn-xs" href="<?=Url::toRoute(['menu/delete','id'=>$v['id']])?>"><i class="fa fa-close"></i>删除</a></td>
                                                 </tr>
                                             <?php endforeach;?>
 
@@ -78,49 +77,7 @@ $this->params['breadcrumbs'][] = $this->title;
                         </div>
                     </div>
                 </div>
-
             </div>
-            <?/*= GridView::widget([
-                'dataProvider' => $dataProvider,
-                'columns' => [
-                    ['class' => 'yii\grid\SerialColumn'],
-
-                    'id',
-                    'name',
-                    'parent',
-                    'route',
-                    'order',
-                    // 'data:ntext',
-
-                    [
-                        'class' => 'yii\grid\ActionColumn',
-                        'header' => '操作',
-                        'template' => '{update} {delete}',//只需要展示删除和更新
-                        'headerOptions' => ['width' => '240'],
-                        'buttons' => [
-                            'delete' => function($url, $model, $key){
-                                return Html::a('<i class="fa fa-close"></i> 删除',
-                                    ['delete', 'id' => $key],
-                                    [
-                                        'class' => 'btn btn-default btn-xs',
-                                        'data' => ['confirm' => '你确定要删除吗？',]
-                                    ]
-                                );
-                            },
-                            'update' => function($url, $model, $key){
-                                return Html::a('<i class="fa fa-edit"></i> 编辑',
-                                    ['update', 'id' => $key],
-                                    [
-                                        'class' => 'btn btn-primary btn-xs'
-                                    ]
-                                );
-                            },
-                        ],
-                    ],
-
-
-                ],
-            ]); */?>
         </div>
 
     </div>

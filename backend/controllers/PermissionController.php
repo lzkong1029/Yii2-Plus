@@ -22,7 +22,6 @@ class PermissionController extends Controller
      */
     public function behaviors()
     {
-        //$action = Yii::$app->controller->action->id;
         $action = Yii::$app->controller->module->requestedRoute;
         if(\Yii::$app->user->can($action)){
             return [
@@ -44,11 +43,8 @@ class PermissionController extends Controller
     {
         $auth = Yii::$app->authManager;
         $Permission = $auth->getPermissionsByRole($id);
-        //$items = $auth->getPermissions();
         $items = AuthItem::find()->joinWith('permissionName')->where(['type' => '2'])->all();
         $menu = Menu::find()->where(['parent'=>'0'])->all();
-
-        //var_dump($items,$menu);exit;
 
         if (Yii::$app->request->post()) {
             $post = Yii::$app->request->post();

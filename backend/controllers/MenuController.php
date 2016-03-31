@@ -21,7 +21,6 @@ class MenuController extends Controller
      */
     public function behaviors()
     {
-        //$action = Yii::$app->controller->action->id;
         $action = Yii::$app->controller->module->requestedRoute;
         if(\Yii::$app->user->can($action)){
             return [
@@ -45,10 +44,6 @@ class MenuController extends Controller
      */
     public function actionIndex()
     {
-        /*$dataProvider = new ActiveDataProvider([
-            'query' => Menu::find(),
-        ]);
-        var_dump($dataProvider);exit;*/
         $menu = Menu::getMenuList();
 
         return $this->render('index', [
@@ -81,7 +76,6 @@ class MenuController extends Controller
         foreach($menu as $v){
             $menuArr[$v['id']] = $v['name'];
         }
-        //var_dump($menuArr);exit;
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
             //增加菜单同时增加权限
             $post = Yii::$app->request->post();
@@ -92,7 +86,6 @@ class MenuController extends Controller
                 $createPost->description = '创建了[' . $name. ']权限';
                 $auth->add($createPost);
             }
-            //return $this->redirect(['view', 'id' => $model->id]);
             return $this->redirect(['index']);
         } else {
             return $this->render('create', [

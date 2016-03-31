@@ -15,8 +15,6 @@ class UserController extends \yii\web\Controller
     public function beforeAction($action)
     {
         $action = Yii::$app->controller->module->requestedRoute;
-        //var_dump($action);exit;
-
         if(\Yii::$app->user->can($action)){
             return true;
         }else{
@@ -57,11 +55,9 @@ class UserController extends \yii\web\Controller
         {
             $item_one[$value]=$value;
         }
-        //var_dump($item_one);exit;
         $model1 = $this->findModel($id);
         if ($model1->load(Yii::$app->request->post()) && $model1->save()) {
             $post = Yii::$app->request->post();
-            //var_dump($post);exit;
             $role = $auth->createRole($post['AuthAssignment']['item_name']);                //创建角色对象
             $user_id = $id;                                             //获取用户id，此处假设用户id=1
             $auth->revokeAll($user_id);

@@ -74,7 +74,6 @@ class ItemController extends Controller
         $value = Yii:: $app-> request->get( 'value', '');
         $search = ($type&&$value)?[ 'like',$type,$value]: '';
         //查询语句
-        //$query = $model->find()->orderBy( 'created_at DESC');
         $query = $model->find()->where(['type'=>2])->orderBy( 'created_at DESC');  //列表只显示角色
         $data = $model->getPages($query,$curPage,$pageSize,$search);
         $pages = new Pagination([ 'totalCount' =>$data[ 'count'], 'pageSize' => $pageSize]);
@@ -109,7 +108,6 @@ class ItemController extends Controller
                 $model->addItem();
                 return $this->redirect([ 'view', 'id' => $model->name]);
             }
-            //return $this->redirect(['view', 'id' => $model->name]);
         } else {
             return $this->render('create', [
                 'model' => $model,
@@ -128,7 +126,6 @@ class ItemController extends Controller
     {
         $model = new AuthItem();
         $model = $model-> getItem($id);
-        //var_dump($model);exit;
         //设置场景
         $model->setScenario(AuthItem:: SCENARIOS_UPDATE);
         if ($model->load(Yii:: $app-> request->post())) {

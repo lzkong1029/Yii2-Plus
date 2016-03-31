@@ -7,7 +7,7 @@ use yii\widgets\ActiveForm;
 
 $this->title = '更新用户 ';
 ?>
-<div class="wrapper wrapper-content animated fadeInRight">
+<div class="wrapper wrapper-content">
 
     <h4><?= Html::encode($this->title) ?></h4>
     <hr>

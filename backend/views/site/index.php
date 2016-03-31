@@ -66,9 +66,9 @@ $this->title = 'Y+';
                             <li>
                                 <a class="J_menuItem" href="<?= Url::toRoute('item/index')?>">角色管理</a>
                             </li>
-                            <li>
-                                <a class="J_menuItem" href="<?= Url::toRoute('item/permission')?>">权限管理</a>
-                            </li>
+                            <!--<li>
+                                <a class="J_menuItem" href="<?/*= Url::toRoute('item/permission')*/?>">权限管理</a>
+                            </li>-->
                             <li>
                                 <a class="J_menuItem" href="<?= Url::toRoute('menu/index')?>">菜单管理</a>
                             </li>

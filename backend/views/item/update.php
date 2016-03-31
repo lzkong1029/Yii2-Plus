@@ -10,7 +10,7 @@ $this->params['breadcrumbs'][] = ['label' => 'Auth Items', 'url' => ['index']];
 $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id' => $model->name]];
 $this->params['breadcrumbs'][] = 'Update';
 ?>
-<div class="wrapper wrapper-content animated fadeInRight">
+<div class="wrapper wrapper-content ">
 
     <h4><?= Html::encode($this->title) ?></h4>
 

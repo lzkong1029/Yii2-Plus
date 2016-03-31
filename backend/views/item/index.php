@@ -64,9 +64,9 @@ $this->params['breadcrumbs'][] = $this-> title;
                             <td ><?= Html::encode($list[ 'description']) ?></ td>
                             <td> <?=Html:: encode($list['created_at']?date('Y-m-d',$list['created_at']):'未设置') ?></ td>
                             <td >
-                                <a href= "<?= Url::to([ 'update', 'id'=>$list[ 'name']]); ?>" >编辑 </a >
-                                <a href= "<?= Url::toRoute([ 'permission/set', 'id'=>$list[ 'name']]); ?>" >权限 </a >
-                                <a class ="del" href= "javaScript:;">删除</a >
+                                <a class="btn btn-primary btn-xs" href= "<?= Url::to([ 'update', 'id'=>$list[ 'name']]); ?>" ><i class="fa fa-edit"></i>编辑 </a >
+                                <a class="btn btn-success btn-xs" href= "<?= Url::toRoute([ 'permission/set', 'id'=>$list[ 'name']]); ?>" ><i class="fa fa-unlock-alt"></i>权限 </a >
+                                <a class ="del btn btn-default btn-xs" href= "javaScript:;"><i class="fa fa-close"></i>删除</a >
                             </td >
                         </tr >
                     <?php endforeach; ?>

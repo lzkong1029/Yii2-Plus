@@ -48,7 +48,7 @@ $this->title = 'My Yii Application';
                                     <td><?=$vo['usergroup']['item_name']?></td>
                                     <td><?=$vo['email']?></td>
                                     <td><?=date('Y-m-d H:i:s',$vo['created_at'])?></td>
-                                    <td><a href="<?=Url::toRoute(['user/update','item_name'=>$vo['usergroup']['item_name'],'id'=>$vo['id']])?>">编辑</a> | <a>禁用</a></td>
+                                    <td><a class="btn btn-primary btn-xs" href="<?=Url::toRoute(['user/update','item_name'=>$vo['usergroup']['item_name'],'id'=>$vo['id']])?>"><i class="fa fa-edit"></i>编辑</a> | <a class="btn btn-default btn-xs"><i class="fa fa-close"></i>禁用</a></td>
                                 </tr>
                             <?php endforeach;?>
                             </tbody>

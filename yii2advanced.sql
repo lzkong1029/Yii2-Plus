@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50547
 File Encoding         : 65001
 
-Date: 2016-03-30 09:10:19
+Date: 2016-04-11 16:38:48
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -31,7 +31,7 @@ CREATE TABLE `auth_assignment` (
 -- Records of auth_assignment
 -- ----------------------------
 INSERT INTO `auth_assignment` VALUES ('普通管理员', '4', null);
-INSERT INTO `auth_assignment` VALUES ('超级管理员', '5', '1458286850');
+INSERT INTO `auth_assignment` VALUES ('超级管理员', '5', null);
 
 -- ----------------------------
 -- Table structure for auth_item
@@ -67,6 +67,7 @@ INSERT INTO `auth_item` VALUES ('menu/update', '2', '创建了[menu/update]权�
 INSERT INTO `auth_item` VALUES ('permission/set', '2', '创建了[permission/set]权限', null, null, '1459244025', '1459244025');
 INSERT INTO `auth_item` VALUES ('user/list', '2', '创建了[user/list]权限', null, null, '1459243859', '1459243859');
 INSERT INTO `auth_item` VALUES ('user/update', '2', '创建了[user/update]权限', null, null, '1459244510', '1459244510');
+INSERT INTO `auth_item` VALUES ('普通用户', '1', '创建[普通用户]角色', null, null, '1459502750', '1459502750');
 INSERT INTO `auth_item` VALUES ('普通管理员', '1', '拥有后台管理权限', null, null, '1458195329', '1458195329');
 INSERT INTO `auth_item` VALUES ('网站编辑', '1', '拥有编辑权限', null, null, '1458195363', '1458195363');
 INSERT INTO `auth_item` VALUES ('超级管理员', '1', '拥有网站所有权限', null, null, '1458195294', '1458195294');
@@ -126,34 +127,35 @@ CREATE TABLE `menu` (
   `name` varchar(128) NOT NULL,
   `parent` int(11) DEFAULT NULL,
   `route` varchar(256) DEFAULT NULL,
-  `order` int(11) DEFAULT NULL,
+  `sort` int(11) DEFAULT NULL,
   `data` text,
+  `status` int(4) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `parent` (`parent`),
   KEY `name` (`name`),
   KEY `route` (`route`(255)),
-  KEY `order` (`order`)
+  KEY `order` (`sort`)
 ) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8 COMMENT='系统管理员菜单权限表';
 
 -- ----------------------------
 -- Records of menu
 -- ----------------------------
-INSERT INTO `menu` VALUES ('2', '系统管理', '0', '', null, '');
-INSERT INTO `menu` VALUES ('8', '主页', '0', '', null, '');
-INSERT INTO `menu` VALUES ('15', '主页1', '8', 'index/index1', null, '');
-INSERT INTO `menu` VALUES ('16', '用户管理', '2', 'user/list', null, '');
-INSERT INTO `menu` VALUES ('17', '权限配置', '2', 'permission/set', null, '');
-INSERT INTO `menu` VALUES ('18', '权限配置', '2', 'permission/set', null, '');
-INSERT INTO `menu` VALUES ('19', '角色管理', '2', 'item/index', null, '');
-INSERT INTO `menu` VALUES ('20', '权限管理', '2', 'item/permission', null, '');
-INSERT INTO `menu` VALUES ('21', '菜单管理', '2', 'menu/index', null, '');
-INSERT INTO `menu` VALUES ('22', '修改用户', '2', 'user/update', null, '');
-INSERT INTO `menu` VALUES ('23', '编辑角色', '2', 'item/update', null, '');
-INSERT INTO `menu` VALUES ('24', '删除角色', '2', 'item/delete', null, '');
-INSERT INTO `menu` VALUES ('25', '创建角色', '2', 'item/create', null, '');
-INSERT INTO `menu` VALUES ('26', '创建菜单', '2', 'menu/create', null, '');
-INSERT INTO `menu` VALUES ('27', '编辑菜单', '2', 'menu/update', null, '');
-INSERT INTO `menu` VALUES ('28', '删除菜单', '2', 'menu/delete', null, '');
+INSERT INTO `menu` VALUES ('2', '系统管理', '0', '', '2', '', '1');
+INSERT INTO `menu` VALUES ('8', '主页', '0', '', '1', '', '1');
+INSERT INTO `menu` VALUES ('15', '主页1', '8', 'index/index1', null, '', '1');
+INSERT INTO `menu` VALUES ('16', '用户管理', '2', 'user/list', null, '', '1');
+INSERT INTO `menu` VALUES ('17', '权限配置', '2', 'permission/set', null, '', '0');
+INSERT INTO `menu` VALUES ('18', '权限配置', '2', 'permission/set', null, '', '0');
+INSERT INTO `menu` VALUES ('19', '角色管理', '2', 'item/index', null, '', '1');
+INSERT INTO `menu` VALUES ('20', '权限管理', '2', 'item/permission', null, '', '0');
+INSERT INTO `menu` VALUES ('21', '菜单管理', '2', 'menu/index', null, '', '1');
+INSERT INTO `menu` VALUES ('22', '修改用户', '2', 'user/update', null, '', '0');
+INSERT INTO `menu` VALUES ('23', '编辑角色', '2', 'item/update', null, '', '0');
+INSERT INTO `menu` VALUES ('24', '删除角色', '2', 'item/delete', null, '', '0');
+INSERT INTO `menu` VALUES ('25', '创建角色', '2', 'item/create', null, '', '0');
+INSERT INTO `menu` VALUES ('26', '创建菜单', '2', 'menu/create', null, '', '0');
+INSERT INTO `menu` VALUES ('27', '编辑菜单', '2', 'menu/update', null, '', '0');
+INSERT INTO `menu` VALUES ('28', '删除菜单', '2', 'menu/delete', null, '', '0');
 
 -- ----------------------------
 -- Table structure for migration

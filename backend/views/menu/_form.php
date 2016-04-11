@@ -14,12 +14,13 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
 
-    <?//= $form->field($model, 'parent')->textInput() ?>
     <?= $form->field($model, 'parent' )->dropDownList($menuArr)?>
 
     <?= $form->field($model, 'route')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'order')->textInput() ?>
+
+    <?= $form->field($model, 'status')->radioList(['1'=>'显示','0'=>'隐藏'])->label('显示')?>
 
     <?= $form->field($model, 'data')->textarea(['rows' => 6]) ?>
 

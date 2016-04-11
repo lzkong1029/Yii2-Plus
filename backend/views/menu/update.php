@@ -11,12 +11,12 @@ $this->params['breadcrumbs'][] = ['label' => $model->name, 'url' => ['view', 'id
 $this->params['breadcrumbs'][] = 'Update';
 ?>
 <div class="wrapper wrapper-content ">
+    <div class="ibox-content">
+        <h1><?= Html::encode($this->title) ?></h1>
 
-    <h1><?= Html::encode($this->title) ?></h1>
-
-    <?= $this->render('_form', [
-        'model' => $model,
-        'menuArr' => $menuArr,
-    ]) ?>
-
+        <?= $this->render('_form', [
+            'model' => $model,
+            'menuArr' => $menuArr,
+        ]) ?>
+    </div>
 </div>

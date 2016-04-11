@@ -117,3 +117,15 @@ a.desc:after {
     padding: 15px 20px 20px;
     border: 1px solid #e7eaec;
 }
+.pd-10{
+    padding: 10px;
+}
+
+.pd-15{
+    padding: 15px;
+}
+
+.pd-20{
+    padding: 20px;
+}
+

@@ -11,29 +11,29 @@ $this->params['breadcrumbs'][] = ['label' => 'Auth Item Children', 'url' => ['in
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="wrapper wrapper-content">
-
+    <div class="ibox-content">
     <h1><?= Html::encode($this->title) ?></h1>
     <hr>
     <form action="<?=Url::toRoute(['permission/set','id'=>$id])?>" method="post">
 
         <div class="row">
 
-                <?php foreach($menu as $vo):?>
-                        <div class="col-sm-12 permission-block">
-                            <div class="ibox-permission">
-                                <h3><?= $vo->name?></h3>
-                                <!--<hr>-->
-                                <input name="parent" type="hidden" value="<?=$id?>">
-                                <!--<label><input type="checkbox" class="chkall" name="checkall" value="1">全选</label>&nbsp;&nbsp;-->
+            <?php foreach($menu as $vo):?>
+                    <div class="col-sm-12 permission-block">
+                        <div class="ibox-permission">
+                            <h3><?= $vo->name?></h3>
+                            <hr>
+                            <input name="parent" type="hidden" value="<?=$id?>">
+                            <!--<label><input type="checkbox" class="chkall" name="checkall" value="1">全选</label>&nbsp;&nbsp;-->
 
-                                <?php foreach($items as $v):?>
-                                    <?php if($vo['id'] == $v->permissionName['parent']):?>
-                                        <label><input type="checkbox" class="chk" name="permission[]" value="<?=$v->name?>"><?=($v->permissionName['name'] ==''? $v->name : $v->permissionName['name'])?></label>&nbsp;&nbsp;
-                                    <?php endif;?>
-                                <?php endforeach;?>
-                            </div>
+                            <?php foreach($items as $v):?>
+                                <?php if($vo['id'] == $v->permissionName['parent']):?>
+                                    <label><input type="checkbox" class="chk" name="permission[]" value="<?=$v->name?>"><?=($v->permissionName['name'] ==''? $v->name : $v->permissionName['name'])?></label>&nbsp;&nbsp;
+                                <?php endif;?>
+                            <?php endforeach;?>
                         </div>
-                <?php endforeach;?>
+                    </div>
+            <?php endforeach;?>
 
         </div>
         <br>
@@ -41,7 +41,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="clear"></div>
         <input type="submit" value="保存" class="btn btn-primary">
     </form>
-
+    </div>
 </div>
 <script type="text/javascript">
     $(document).ready(function () {

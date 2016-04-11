@@ -41,7 +41,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                             <td><?=$vo['name']?></td>
                                             <td><?=$vo['parent']?></td>
                                             <td><?=$vo['route']?></td>
-                                            <td><?=($vo['order']==''?'未排序':$vo['order'])?></td>
+                                            <td><?=($vo['sort']==''?'未排序':$vo['sort'])?></td>
                                             <td><a class="btn btn-primary btn-xs" href="<?=Url::toRoute(['menu/update','id'=>$vo['id']])?>"><i class="fa fa-edit"></i>编辑</a>  <a class="btn btn-default btn-xs"  href="<?=Url::toRoute(['menu/delete','id'=>$vo['id']])?>"><i class="fa fa-close"></i>删除</a></td>
                                         </tr>
                                         <?php if(!empty($vo['_child'])):?>
@@ -51,7 +51,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                                 <td><?=$v['name']?></td>
                                                 <td><?=$v['parent']?></td>
                                                 <td><?=$v['route']?></td>
-                                                <td><?=($v['order']==''?'未排序':$v['order'])?></td>
+                                                <td><?=($v['sort']==''?'未排序':$v['sort'])?></td>
 
                                                 <td><a class="btn btn-primary btn-xs" href="<?=Url::toRoute(['menu/update','id'=>$v['id']])?>"><i class="fa fa-edit"></i>编辑</a>  <a class="btn btn-default btn-xs" href="<?=Url::toRoute(['menu/delete','id'=>$v['id']])?>"><i class="fa fa-close"></i>删除</a></td>
                                                 </tr>

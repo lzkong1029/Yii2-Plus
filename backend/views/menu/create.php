@@ -11,7 +11,7 @@ $this->params['breadcrumbs'][] = ['label' => 'Menus', 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="wrapper wrapper-content">
-
+<div class="ibox-content">
     <h1><?= Html::encode($this->title) ?></h1>
 
     <?= $this->render('_form', [
@@ -19,4 +19,5 @@ $this->params['breadcrumbs'][] = $this->title;
         'menuArr' => $menuArr,
     ]) ?>
 
+</div>
 </div>

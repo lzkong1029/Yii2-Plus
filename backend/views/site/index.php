@@ -39,41 +39,26 @@ $this->title = 'Y+';
                         <div class="logo-element">H+
                         </div>
                     </li>
-                    <li>
-                        <a href="#">
-                            <i class="fa fa-home"></i>
-                            <span class="nav-label">主页</span>
-                            <span class="fa arrow"></span>
-                        </a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a class="J_menuItem" href="<?= Url::toRoute('index/index1');?>" data-index="0">主页示例一</a>
-                            </li>
-                        </ul>
 
-                    </li>
+                    <?php foreach($menu as $vo):?>
+                        <li>
+                            <a href="#">
+                                <i class="fa fa-home"></i>
+                                <span class="nav-label"><?= $vo['name']?></span>
+                                <span class="fa arrow"></span>
+                            </a>
+                            <ul class="nav nav-second-level">
+                                <?php foreach($vo['_child'] as $v):?>
 
-                    <li>
-                        <a href="#">
-                            <i class="fa fa fa-bar-chart-o"></i>
-                            <span class="nav-label">系统管理</span>
-                            <span class="fa arrow"></span>
-                        </a>
-                        <ul class="nav nav-second-level">
-                            <li>
-                                <a class="J_menuItem" href="<?= Url::toRoute('user/list')?>">用户管理</a>
-                            </li>
-                            <li>
-                                <a class="J_menuItem" href="<?= Url::toRoute('item/index')?>">角色管理</a>
-                            </li>
-                            <!--<li>
-                                <a class="J_menuItem" href="<?/*= Url::toRoute('item/permission')*/?>">权限管理</a>
-                            </li>-->
-                            <li>
-                                <a class="J_menuItem" href="<?= Url::toRoute('menu/index')?>">菜单管理</a>
-                            </li>
-                        </ul>
-                    </li>
+                                    <li>
+                                        <a class="J_menuItem" href="<?= Url::toRoute($v['route']);?>" data-index="0"><?= $v['name']?></a>
+                                    </li>
+                                <?php endforeach;?>
+
+                            </ul>
+
+                        </li>
+                    <?php endforeach;?>
 
                 </ul>
             </div>

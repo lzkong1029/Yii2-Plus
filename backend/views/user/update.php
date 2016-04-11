@@ -8,27 +8,28 @@ use yii\widgets\ActiveForm;
 $this->title = '更新用户 ';
 ?>
 <div class="wrapper wrapper-content">
+    <div class="ibox-content">
+        <div class="row pd-10">
+            <h4><?= Html::encode($this->title) ?></h4>
+            <hr>
+            <div class="auth-item-form col-sm-4">
+                <?php $form = ActiveForm::begin(); ?>
 
-    <h4><?= Html::encode($this->title) ?></h4>
-    <hr>
-    <div class="auth-item-form col-sm-4">
+                <?= $form->field($model, 'id')->hiddenInput()->label('') ?>
 
-        <?php $form = ActiveForm::begin(); ?>
+                <?= $form->field($model, 'username')->textInput(['readonly'=>true])->label('用户名') ?>
 
-        <?= $form->field($model, 'id')->hiddenInput()->label('')?>
+                <?= $form->field($model, 'email')->textInput(['email' => true])->label('邮箱')?>
 
-        <?= $form->field($model, 'username')->textInput(['readonly'=>true])->label('用户名') ?>
+                <?= $form->field($model->usergroup, 'item_name' )->dropDownList($item)->label('用户组')?>
 
-        <?= $form->field($model, 'email')->textInput(['email' => true])->label('邮箱')?>
+                <div class="form-group">
+                    <?= Html::submitButton('保存', ['class' => 'btn btn-primary']) ?>
+                </div>
 
-        <?= $form->field($model->usergroup, 'item_name' )->dropDownList($item)->label('用户组')?>
-
-        <div class="form-group">
-            <?= Html::submitButton('保存', ['class' => 'btn btn-primary']) ?>
+                <?php ActiveForm::end(); ?>
+            </div>
         </div>
-
-        <?php ActiveForm::end(); ?>
-
     </div>
 
 </div>

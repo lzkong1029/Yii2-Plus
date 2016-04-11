@@ -6,6 +6,7 @@ use yii\web\Controller;
 use yii\filters\VerbFilter;
 use yii\filters\AccessControl;
 use common\models\LoginForm;
+use backend\models\Menu;
 
 /**
  * Site controller
@@ -55,12 +56,14 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
-        return $this->render('index');
+        $menu = Menu::getLeftMenuList();
+        return $this->render('index',[
+            'menu' => $menu
+        ]);
     }
 
     public function actionList()
     {
-        //var_dump('1234');exit;
         return $this->render('list');
     }
 
@@ -86,4 +89,5 @@ class SiteController extends Controller
 
         return $this->goHome();
     }
+
 }

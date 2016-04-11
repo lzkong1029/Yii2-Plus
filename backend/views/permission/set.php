@@ -19,7 +19,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="row">
 
                 <?php foreach($menu as $vo):?>
-                        <div class="col-sm-6 permission-block">
+                        <div class="col-sm-12 permission-block">
                             <div class="ibox-permission">
                                 <h3><?= $vo->name?></h3>
                                 <!--<hr>-->

@@ -110,15 +110,10 @@ a.desc:after {
 }
 
 
-.permission-block{height: 120px;background: #ffffff}
+.permission-block{height: 100%;background: #ffffff;padding: 10px;}
 .ibox-permission {
     background-color: #fff;
     color: inherit;
     padding: 15px 20px 20px;
-    border-color: #e7eaec;
-    -webkit-border-image: none;
-    -o-border-image: none;
-    border-image: none;
-    border-style: solid solid none;
-    border-width: 1px 0px 0px 0px;
+    border: 1px solid #e7eaec;
 }

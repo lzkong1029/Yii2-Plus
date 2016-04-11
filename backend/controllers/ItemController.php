@@ -106,7 +106,8 @@ class ItemController extends Controller
         if ($model->load(Yii::$app->request->post())) {
             if($model->validate()){
                 $model->addItem();
-                return $this->redirect([ 'view', 'id' => $model->name]);
+                //return $this->redirect([ 'view', 'id' => $model->name]);
+                return $this->redirect(['index']);
             }
         } else {
             return $this->render('create', [

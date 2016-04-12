@@ -22,21 +22,10 @@ $this->title = 'My Yii Application';
                     </div>
                     <hr>
 
-
-                    <!--<div class="row">
-                        <div class="col-sm-3">
-                            <div class="input-group">
-                                <input type="text" placeholder="请输入关键词" class="input-sm form-control"> <span class="input-group-btn">
-                                        <button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>
-                            </div>
-                        </div>
-                    </div>-->
                     <div class="table-responsive">
                         <table class="table table-striped">
                             <thead>
                             <tr>
-
-                                <th></th>
                                 <th>ID</th>
                                 <th>用户名</th>
                                 <th>用户组</th>
@@ -48,9 +37,6 @@ $this->title = 'My Yii Application';
                             <tbody>
                             <?php foreach($user as $vo):?>
                                 <tr>
-                                    <td>
-                                        <input type="checkbox" checked class="i-checks" name="input[]">
-                                    </td>
                                     <td><?=$vo['id']?></td>
                                     <td><?=$vo['username']?></td>
                                     <td><?=$vo['usergroup']['item_name']?></td>
@@ -89,4 +75,3 @@ $this->title = 'My Yii Application';
 <script>
     $(document).ready(function(){$(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",})});
 </script>
-<script type="text/javascript" src="http://tajs.qq.com/stats?sId=9051096" charset="UTF-8"></script>

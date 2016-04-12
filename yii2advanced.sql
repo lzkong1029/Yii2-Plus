@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50547
 File Encoding         : 65001
 
-Date: 2016-04-12 13:54:12
+Date: 2016-04-12 14:05:36
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -58,7 +58,7 @@ CREATE TABLE `auth_item` (
 -- ----------------------------
 -- Records of auth_item
 -- ----------------------------
-INSERT INTO `auth_item` VALUES ('index/index1', '2', '创建了[index/index1]权限', null, null, '1459240632', '1459240632');
+INSERT INTO `auth_item` VALUES ('index/welcome', '2', '创建[index/welcome]权限', null, null, '1460440772', '1460440772');
 INSERT INTO `auth_item` VALUES ('item/create', '2', '创建了[item/create]权限', null, null, '1459244668', '1459244668');
 INSERT INTO `auth_item` VALUES ('item/delete', '2', '创建了[item/delete]权限', null, null, '1459244640', '1459244640');
 INSERT INTO `auth_item` VALUES ('item/index', '2', '创建了[item/index]权限', null, null, '1459244203', '1459244203');
@@ -94,7 +94,7 @@ CREATE TABLE `auth_item_child` (
 -- ----------------------------
 -- Records of auth_item_child
 -- ----------------------------
-INSERT INTO `auth_item_child` VALUES ('超级管理员', 'index/index1');
+INSERT INTO `auth_item_child` VALUES ('超级管理员', 'index/welcome');
 INSERT INTO `auth_item_child` VALUES ('超级管理员', 'item/create');
 INSERT INTO `auth_item_child` VALUES ('超级管理员', 'item/delete');
 INSERT INTO `auth_item_child` VALUES ('普通管理员', 'item/index');
@@ -170,7 +170,7 @@ CREATE TABLE `menu` (
 -- ----------------------------
 INSERT INTO `menu` VALUES ('2', '系统管理', '0', '', '2', '', '1');
 INSERT INTO `menu` VALUES ('8', '主页', '0', '', '1', '', '1');
-INSERT INTO `menu` VALUES ('15', '主页1', '8', 'index/index1', null, '', '1');
+INSERT INTO `menu` VALUES ('15', '欢迎页面', '8', 'index/welcome', null, '', '1');
 INSERT INTO `menu` VALUES ('16', '用户管理', '2', 'user/list', null, '', '1');
 INSERT INTO `menu` VALUES ('17', '权限配置', '2', 'permission/set', null, '', '0');
 INSERT INTO `menu` VALUES ('18', '权限配置', '2', 'permission/set', null, '', '0');

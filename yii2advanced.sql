@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50547
 File Encoding         : 65001
 
-Date: 2016-04-11 16:38:48
+Date: 2016-04-12 13:54:12
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -30,6 +30,10 @@ CREATE TABLE `auth_assignment` (
 -- ----------------------------
 -- Records of auth_assignment
 -- ----------------------------
+INSERT INTO `auth_assignment` VALUES ('普通用户', '12', '1460425053');
+INSERT INTO `auth_assignment` VALUES ('普通管理员', '14', '1460425467');
+INSERT INTO `auth_assignment` VALUES ('普通管理员', '15', '1460425522');
+INSERT INTO `auth_assignment` VALUES ('普通管理员', '16', '1460426459');
 INSERT INTO `auth_assignment` VALUES ('普通管理员', '4', null);
 INSERT INTO `auth_assignment` VALUES ('超级管理员', '5', null);
 
@@ -65,6 +69,8 @@ INSERT INTO `auth_item` VALUES ('menu/delete', '2', '创建了[menu/delete]权�
 INSERT INTO `auth_item` VALUES ('menu/index', '2', '创建了[menu/index]权限', null, null, '1459244264', '1459244264');
 INSERT INTO `auth_item` VALUES ('menu/update', '2', '创建了[menu/update]权限', null, null, '1459244958', '1459244958');
 INSERT INTO `auth_item` VALUES ('permission/set', '2', '创建了[permission/set]权限', null, null, '1459244025', '1459244025');
+INSERT INTO `auth_item` VALUES ('user/create', '2', '创建了[user/create]权限', null, null, '1460367527', '1460367527');
+INSERT INTO `auth_item` VALUES ('user/delete', '2', '创建了[user/delete]权限', null, null, '1460428104', '1460428104');
 INSERT INTO `auth_item` VALUES ('user/list', '2', '创建了[user/list]权限', null, null, '1459243859', '1459243859');
 INSERT INTO `auth_item` VALUES ('user/update', '2', '创建了[user/update]权限', null, null, '1459244510', '1459244510');
 INSERT INTO `auth_item` VALUES ('普通用户', '1', '创建[普通用户]角色', null, null, '1459502750', '1459502750');
@@ -91,6 +97,7 @@ CREATE TABLE `auth_item_child` (
 INSERT INTO `auth_item_child` VALUES ('超级管理员', 'index/index1');
 INSERT INTO `auth_item_child` VALUES ('超级管理员', 'item/create');
 INSERT INTO `auth_item_child` VALUES ('超级管理员', 'item/delete');
+INSERT INTO `auth_item_child` VALUES ('普通管理员', 'item/index');
 INSERT INTO `auth_item_child` VALUES ('超级管理员', 'item/index');
 INSERT INTO `auth_item_child` VALUES ('超级管理员', 'item/permission');
 INSERT INTO `auth_item_child` VALUES ('超级管理员', 'item/update');
@@ -99,6 +106,9 @@ INSERT INTO `auth_item_child` VALUES ('超级管理员', 'menu/delete');
 INSERT INTO `auth_item_child` VALUES ('超级管理员', 'menu/index');
 INSERT INTO `auth_item_child` VALUES ('超级管理员', 'menu/update');
 INSERT INTO `auth_item_child` VALUES ('超级管理员', 'permission/set');
+INSERT INTO `auth_item_child` VALUES ('超级管理员', 'user/create');
+INSERT INTO `auth_item_child` VALUES ('超级管理员', 'user/delete');
+INSERT INTO `auth_item_child` VALUES ('普通管理员', 'user/list');
 INSERT INTO `auth_item_child` VALUES ('超级管理员', 'user/list');
 INSERT INTO `auth_item_child` VALUES ('超级管理员', 'user/update');
 
@@ -119,6 +129,24 @@ CREATE TABLE `auth_rule` (
 -- ----------------------------
 
 -- ----------------------------
+-- Table structure for log
+-- ----------------------------
+DROP TABLE IF EXISTS `log`;
+CREATE TABLE `log` (
+  `id` int(4) NOT NULL AUTO_INCREMENT,
+  `username` varchar(32) DEFAULT NULL,
+  `ip` varchar(64) DEFAULT NULL,
+  `data` varchar(64) DEFAULT NULL,
+  `create_time` varchar(32) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of log
+-- ----------------------------
+INSERT INTO `log` VALUES ('1', 'lzkong1029', '127.0.0.1', '', '1460439851');
+
+-- ----------------------------
 -- Table structure for menu
 -- ----------------------------
 DROP TABLE IF EXISTS `menu`;
@@ -135,7 +163,7 @@ CREATE TABLE `menu` (
   KEY `name` (`name`),
   KEY `route` (`route`(255)),
   KEY `order` (`sort`)
-) ENGINE=InnoDB AUTO_INCREMENT=29 DEFAULT CHARSET=utf8 COMMENT='系统管理员菜单权限表';
+) ENGINE=InnoDB AUTO_INCREMENT=32 DEFAULT CHARSET=utf8 COMMENT='系统管理员菜单权限表';
 
 -- ----------------------------
 -- Records of menu
@@ -156,6 +184,8 @@ INSERT INTO `menu` VALUES ('25', '创建角色', '2', 'item/create', null, '', '
 INSERT INTO `menu` VALUES ('26', '创建菜单', '2', 'menu/create', null, '', '0');
 INSERT INTO `menu` VALUES ('27', '编辑菜单', '2', 'menu/update', null, '', '0');
 INSERT INTO `menu` VALUES ('28', '删除菜单', '2', 'menu/delete', null, '', '0');
+INSERT INTO `menu` VALUES ('30', '新增用户', '2', 'user/create', null, '', null);
+INSERT INTO `menu` VALUES ('31', '删除用户', '2', 'user/delete', null, '', null);
 
 -- ----------------------------
 -- Table structure for migration
@@ -188,7 +218,7 @@ CREATE TABLE `user` (
   `created_at` int(11) NOT NULL,
   `updated_at` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user

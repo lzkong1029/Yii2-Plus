@@ -10,7 +10,7 @@ $this->title = '更新用户 ';
 <div class="wrapper wrapper-content">
     <div class="ibox-content">
         <div class="row pd-10">
-            <h4><?= Html::encode($this->title) ?></h4>
+            <h1><?= Html::encode($this->title) ?></h1>
             <hr>
             <div class="auth-item-form col-sm-4">
                 <?php $form = ActiveForm::begin(); ?>

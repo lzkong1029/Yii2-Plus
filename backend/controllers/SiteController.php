@@ -57,6 +57,7 @@ class SiteController extends Controller
     public function actionIndex()
     {
         $menu = Menu::getLeftMenuList();
+        //var_dump($menu);exit;
         return $this->render('index',[
             'menu' => $menu
         ]);

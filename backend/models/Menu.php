@@ -31,7 +31,7 @@ class Menu extends \yii\db\ActiveRecord
     {
         return [
             [['name'], 'required'],
-            [['parent', 'order'], 'integer'],
+            [['parent', 'sort'], 'integer'],
             [['data'], 'string'],
             [['name'], 'string', 'max' => 128],
             [['route'], 'string', 'max' => 256],
@@ -48,7 +48,7 @@ class Menu extends \yii\db\ActiveRecord
             'name' => '名称',
             'parent' => '父级',
             'route' => '路由',
-            'order' => '排序',
+            'sort' => '排序',
             'data' => '描述',
         ];
     }

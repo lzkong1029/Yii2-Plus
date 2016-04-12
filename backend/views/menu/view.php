@@ -32,7 +32,7 @@ $this->params['breadcrumbs'][] = $this->title;
             'name',
             'parent',
             'route',
-            'order',
+            'sort',
             'data:ntext',
         ],
     ]) ?>

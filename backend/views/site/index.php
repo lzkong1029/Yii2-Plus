@@ -48,15 +48,12 @@ $this->title = 'Y+';
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="nav nav-second-level">
-                                <?php foreach($vo['_child'] as $v):?>
-
+                                <?php if(!empty($vo['_child'])): foreach($vo['_child'] as $v):?>
                                     <li>
                                         <a class="J_menuItem" href="<?= Url::toRoute($v['route']);?>" data-index="0"><?= $v['name']?></a>
                                     </li>
-                                <?php endforeach;?>
-
+                                <?php endforeach; endif;?>
                             </ul>
-
                         </li>
                     <?php endforeach;?>
 

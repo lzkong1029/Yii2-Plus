@@ -110,7 +110,7 @@ class MenuController extends Controller
             $menuArr[$v['id']] = $v['name'];
         }
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-            return $this->redirect(['view', 'id' => $model->id]);
+            return $this->redirect(['index']);
         } else {
             return $this->render('update', [
                 'model' => $model,

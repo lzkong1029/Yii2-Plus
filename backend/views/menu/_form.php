@@ -18,7 +18,7 @@ use yii\widgets\ActiveForm;
 
     <?= $form->field($model, 'route')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'order')->textInput() ?>
+    <?= $form->field($model, 'sort')->textInput()->label('排序') ?>
 
     <?= $form->field($model, 'status')->radioList(['1'=>'显示','0'=>'隐藏'])->label('显示')?>
 

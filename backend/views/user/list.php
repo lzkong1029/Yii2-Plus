@@ -15,6 +15,14 @@ $this->title = 'My Yii Application';
             <div class="ibox float-e-margins">
 
                 <div class="ibox-content">
+                    <div class="row">
+                    <div class="col-sm-3">
+                        <a class="btn btn-info btn-sm" href="<?= Url::toRoute('user/create')?>">新增用户</a>
+                    </div>
+                    </div>
+                    <hr>
+
+
                     <!--<div class="row">
                         <div class="col-sm-3">
                             <div class="input-group">
@@ -48,7 +56,7 @@ $this->title = 'My Yii Application';
                                     <td><?=$vo['usergroup']['item_name']?></td>
                                     <td><?=$vo['email']?></td>
                                     <td><?=date('Y-m-d H:i:s',$vo['created_at'])?></td>
-                                    <td><a class="btn btn-primary btn-xs" href="<?=Url::toRoute(['user/update','item_name'=>$vo['usergroup']['item_name'],'id'=>$vo['id']])?>"><i class="fa fa-edit"></i>编辑</a>  <a class="btn btn-default btn-xs"><i class="fa fa-close"></i>禁用</a></td>
+                                    <td><a class="btn btn-primary btn-xs" href="<?=Url::toRoute(['user/update','item_name'=>$vo['usergroup']['item_name'],'id'=>$vo['id']])?>"><i class="fa fa-edit"></i>编辑</a>  <a href="<?=Url::toRoute(['user/delete','id'=>$vo['id']])?>" class="btn btn-default btn-xs"><i class="fa fa-close"></i>删除</a></td>
                                 </tr>
                             <?php endforeach;?>
                             </tbody>

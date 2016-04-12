@@ -15,6 +15,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="ibox-content">
             <h1><?= Html::encode($this->title) ?></h1>
 
+            <hr/>
             <?= $this->render('_form', [
                 'model' => $model,
                 'model1' => $model1,

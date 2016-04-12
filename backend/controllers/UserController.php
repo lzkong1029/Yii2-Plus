@@ -42,11 +42,7 @@ class UserController extends \yii\web\Controller
             'pages' => $pages
         ]);
     }
-    /**
-     * Creates a new User model.
-     * If creation is successful, the browser will be redirected to the 'view' page.
-     * @return mixed
-     */
+    //新增用户
     public function actionCreate()
     {
         $model = new User();
@@ -69,6 +65,7 @@ class UserController extends \yii\web\Controller
             $model->email = $post['User']['email'];
             $model->setPassword($post['User']['auth_key']);
             $model->generateAuthKey();
+            $model->created_at = time();
             $model->save();
             //获取插入后id
             $user_id = $model->attributes['id'];
@@ -85,7 +82,7 @@ class UserController extends \yii\web\Controller
         }
     }
 
-
+    //更新用户
     public function actionUpdate(){
         $item_name = Yii::$app->request->get('item_name');
         $id = Yii::$app->request->get('id');
@@ -115,11 +112,10 @@ class UserController extends \yii\web\Controller
             'item' => $item_one
         ]);
     }
-
+    //删除用户
     public function actionDelete($id)
     {
         $this->findModel($id)->delete();
-
         return $this->redirect(['list']);
     }
 

@@ -12,7 +12,6 @@ $this->params['breadcrumbs'][] = $this->title;
 <div class="wrapper wrapper-content">
     <div class="ibox float-e-margins">
         <div class="ibox-content">
-            <h1><?= Html::encode($this->title) ?></h1>
             <p>
                 <?= Html::a('创建菜单', ['create'], ['class' => 'btn btn-primary']) ?>
             </p>

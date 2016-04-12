@@ -56,10 +56,12 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
+        $user_id=Yii::$app->user->identity->getId();
+        $user_info = Yii::$app->authManager->getRolesByUser($user_id);
         $menu = Menu::getLeftMenuList();
-        //var_dump($menu);exit;
         return $this->render('index',[
-            'menu' => $menu
+            'menu' => $menu,
+            'user_info' => key($user_info)
         ]);
     }
 
@@ -76,6 +78,7 @@ class SiteController extends Controller
 
         $model = new LoginForm();
         if ($model->load(Yii::$app->request->post()) && $model->login()) {
+            $model->loginLog();
             return $this->goBack();
         } else {
             return $this->render('login', [

@@ -66,12 +66,3 @@ $this->title = 'My Yii Application';
 
     </div>
 </div>
-<script src="js/jquery.min.js?v=2.1.4"></script>
-<script src="js/bootstrap.min.js?v=3.3.6"></script>
-<script src="js/plugins/peity/jquery.peity.min.js"></script>
-<script src="js/content.min.js?v=1.0.0"></script>
-<script src="js/plugins/iCheck/icheck.min.js"></script>
-<script src="js/demo/peity-demo.min.js"></script>
-<script>
-    $(document).ready(function(){$(".i-checks").iCheck({checkboxClass:"icheckbox_square-green",radioClass:"iradio_square-green",})});
-</script>

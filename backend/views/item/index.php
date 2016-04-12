@@ -19,18 +19,6 @@ $this->params['breadcrumbs'][] = $this-> title;
                 <a class="btn btn-info btn-sm" href="<?= Url::toRoute('item/index')?>">角色管理</a>
                 <a class="btn btn-info btn-sm" href="<?= Url::toRoute('item/permission')?>">权限管理</a>
             </div>
-            <!--<div class="col-md-1 m-b-xs">
-                <select class="input-sm form-control input-s-sm inline">
-                    <option value="1">角色</option>
-                    <option value="2">权限</option>
-                </select>
-            </div>-->
-            <!--<div class="col-sm-3">
-                <div class="input-group">
-                    <input type="text" placeholder="请输入关键词" class="input-sm form-control"> <span class="input-group-btn">
-                                        <button type="button" class="btn btn-sm btn-primary"> 搜索</button> </span>
-                </div>
-            </div>-->
         </div>
         <hr>
         <div class="table-responsive">
@@ -39,9 +27,6 @@ $this->params['breadcrumbs'][] = $this-> title;
             <table class ="table table-striped table_base">
                 <thead >
                 <tr >
-                    <!--                 <th> -->
-                    <!--                     <div class="checker"><span><input type="checkbox" value="1" name="select_all" class="select-on-check-all"></span></div> -->
-                    <!--                 </th> -->
                     <th >ID</th >
                     <th >名称 </th >
                     <th >类型 </th >
@@ -57,9 +42,6 @@ $this->params['breadcrumbs'][] = $this-> title;
                     <?php $i = $data['start'];?>
                     <?php foreach ( $data['data'] as $list):?>
                         <tr data-key =" <?=$list[ 'name'] ?>" >
-                            <!--                 <td> -->
-                            <!--                     <div class="checker"><span><input type="checkbox" value="158" name="select"></span></div> -->
-                            <!--                 </td> -->
                             <td ><?= $i++?> </td >
                             <td ><?= Html::encode($list[ 'name']) ?></ td>
                             <td ><?= Html::encode(($list[ 'type']==1)? '角色': '权限') ?></ td>

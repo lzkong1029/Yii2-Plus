@@ -28,6 +28,7 @@ $this->params['breadcrumbs'][] = $this->title;
                                         <th>名称</th>
                                         <th>父级</th>
                                         <th>路由</th>
+                                        <th>状态</th>
                                         <th>排序</th>
                                         <th>操作</th>
                                     </tr>
@@ -35,11 +36,11 @@ $this->params['breadcrumbs'][] = $this->title;
                                     <tbody>
                                     <?php foreach($menu as $vo):?>
                                         <tr>
-
                                             <td><?=$vo['id']?></td>
                                             <td><?=$vo['name']?></td>
                                             <td><?=$vo['parent']?></td>
                                             <td><?=$vo['route']?></td>
+                                            <td><?=$vo['status'] >0 ? '显示 ' : '隐藏'?></td>
                                             <td><?=($vo['sort']==''?'未排序':$vo['sort'])?></td>
                                             <td><a class="btn btn-primary btn-xs" href="<?=Url::toRoute(['menu/update','id'=>$vo['id']])?>"><i class="fa fa-edit"></i>编辑</a>  <a class="btn btn-default btn-xs"  href="<?=Url::toRoute(['menu/delete','id'=>$vo['id']])?>"><i class="fa fa-close"></i>删除</a></td>
                                         </tr>
@@ -50,8 +51,8 @@ $this->params['breadcrumbs'][] = $this->title;
                                                 <td><?=$v['name']?></td>
                                                 <td><?=$v['parent']?></td>
                                                 <td><?=$v['route']?></td>
+                                                <td><?=$v['status'] > 0 ? '显示' : '隐藏'?></td>
                                                 <td><?=($v['sort']==''?'未排序':$v['sort'])?></td>
-
                                                 <td><a class="btn btn-primary btn-xs" href="<?=Url::toRoute(['menu/update','id'=>$v['id']])?>"><i class="fa fa-edit"></i>编辑</a>  <a class="btn btn-default btn-xs" href="<?=Url::toRoute(['menu/delete','id'=>$v['id']])?>"><i class="fa fa-close"></i>删除</a></td>
                                                 </tr>
                                             <?php endforeach;?>

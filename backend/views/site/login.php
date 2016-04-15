@@ -7,7 +7,7 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 
-$this->title = 'Login';
+$this->title = 'Y+后台管理系统';
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="middle-box text-center loginscreen  animated fadeInDown">
@@ -38,5 +38,11 @@ $this->params['breadcrumbs'][] = $this->title;
         </div>
     </div>
     </div>
+    <div class="footer">
+        <div class="">Copyright &copy; 2012-2016 <a href="http://1000xun.findz.cn/" target="_blank">Findz.cn</a>
+        </div>
+    </div>
 </div>
+
+
 

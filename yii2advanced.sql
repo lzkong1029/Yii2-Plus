@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50547
 File Encoding         : 65001
 
-Date: 2016-04-12 14:05:36
+Date: 2016-04-15 09:42:38
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -34,6 +34,8 @@ INSERT INTO `auth_assignment` VALUES ('普通用户', '12', '1460425053');
 INSERT INTO `auth_assignment` VALUES ('普通管理员', '14', '1460425467');
 INSERT INTO `auth_assignment` VALUES ('普通管理员', '15', '1460425522');
 INSERT INTO `auth_assignment` VALUES ('普通管理员', '16', '1460426459');
+INSERT INTO `auth_assignment` VALUES ('普通管理员', '17', '1460441363');
+INSERT INTO `auth_assignment` VALUES ('普通管理员', '18', '1460510925');
 INSERT INTO `auth_assignment` VALUES ('普通管理员', '4', null);
 INSERT INTO `auth_assignment` VALUES ('超级管理员', '5', null);
 
@@ -139,12 +141,23 @@ CREATE TABLE `log` (
   `data` varchar(64) DEFAULT NULL,
   `create_time` varchar(32) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of log
 -- ----------------------------
 INSERT INTO `log` VALUES ('1', 'lzkong1029', '127.0.0.1', '', '1460439851');
+INSERT INTO `log` VALUES ('2', 'lzkong1029', '127.0.0.1', '', '1460441344');
+INSERT INTO `log` VALUES ('3', 'test', '127.0.0.1', '', '1460441372');
+INSERT INTO `log` VALUES ('4', 'lzkong1029', '127.0.0.1', '', '1460441448');
+INSERT INTO `log` VALUES ('5', 'lzkong1029', '127.0.0.1', '', '1460443092');
+INSERT INTO `log` VALUES ('6', 'test', '127.0.0.1', '', '1460510935');
+INSERT INTO `log` VALUES ('7', 'lzkong1029', '127.0.0.1', '', '1460511022');
+INSERT INTO `log` VALUES ('8', 'lzkong1029', '127.0.0.1', '', '1460511099');
+INSERT INTO `log` VALUES ('9', 'test', '127.0.0.1', '', '1460511126');
+INSERT INTO `log` VALUES ('10', 'lzkong1029', '127.0.0.1', '', '1460518525');
+INSERT INTO `log` VALUES ('11', 'test', '127.0.0.1', '', '1460529644');
+INSERT INTO `log` VALUES ('12', 'lzkong1029', '127.0.0.1', '', '1460683222');
 
 -- ----------------------------
 -- Table structure for menu
@@ -155,9 +168,9 @@ CREATE TABLE `menu` (
   `name` varchar(128) NOT NULL,
   `parent` int(11) DEFAULT NULL,
   `route` varchar(256) DEFAULT NULL,
-  `sort` int(11) DEFAULT NULL,
+  `sort` varchar(11) DEFAULT NULL,
   `data` text,
-  `status` int(4) DEFAULT NULL,
+  `status` int(4) unsigned zerofill DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `parent` (`parent`),
   KEY `name` (`name`),
@@ -168,24 +181,24 @@ CREATE TABLE `menu` (
 -- ----------------------------
 -- Records of menu
 -- ----------------------------
-INSERT INTO `menu` VALUES ('2', '系统管理', '0', '', '2', '', '1');
-INSERT INTO `menu` VALUES ('8', '主页', '0', '', '1', '', '1');
-INSERT INTO `menu` VALUES ('15', '欢迎页面', '8', 'index/welcome', null, '', '1');
-INSERT INTO `menu` VALUES ('16', '用户管理', '2', 'user/list', null, '', '1');
-INSERT INTO `menu` VALUES ('17', '权限配置', '2', 'permission/set', null, '', '0');
-INSERT INTO `menu` VALUES ('18', '权限配置', '2', 'permission/set', null, '', '0');
-INSERT INTO `menu` VALUES ('19', '角色管理', '2', 'item/index', null, '', '1');
-INSERT INTO `menu` VALUES ('20', '权限管理', '2', 'item/permission', null, '', '0');
-INSERT INTO `menu` VALUES ('21', '菜单管理', '2', 'menu/index', null, '', '1');
-INSERT INTO `menu` VALUES ('22', '修改用户', '2', 'user/update', null, '', '0');
-INSERT INTO `menu` VALUES ('23', '编辑角色', '2', 'item/update', null, '', '0');
-INSERT INTO `menu` VALUES ('24', '删除角色', '2', 'item/delete', null, '', '0');
-INSERT INTO `menu` VALUES ('25', '创建角色', '2', 'item/create', null, '', '0');
-INSERT INTO `menu` VALUES ('26', '创建菜单', '2', 'menu/create', null, '', '0');
-INSERT INTO `menu` VALUES ('27', '编辑菜单', '2', 'menu/update', null, '', '0');
-INSERT INTO `menu` VALUES ('28', '删除菜单', '2', 'menu/delete', null, '', '0');
-INSERT INTO `menu` VALUES ('30', '新增用户', '2', 'user/create', null, '', null);
-INSERT INTO `menu` VALUES ('31', '删除用户', '2', 'user/delete', null, '', null);
+INSERT INTO `menu` VALUES ('2', '系统管理', '0', '', '2', '', '0001');
+INSERT INTO `menu` VALUES ('8', '主页', '0', '', '1', '', '0001');
+INSERT INTO `menu` VALUES ('15', '欢迎页面', '8', 'index/welcome', null, '', '0001');
+INSERT INTO `menu` VALUES ('16', '用户管理', '2', 'user/list', null, '', '0001');
+INSERT INTO `menu` VALUES ('17', '权限配置', '2', 'permission/set', null, '', '0000');
+INSERT INTO `menu` VALUES ('18', '权限配置', '2', 'permission/set', null, '', '0000');
+INSERT INTO `menu` VALUES ('19', '角色管理', '2', 'item/index', null, '', '0001');
+INSERT INTO `menu` VALUES ('20', '权限管理', '2', 'item/permission', null, '', '0000');
+INSERT INTO `menu` VALUES ('21', '菜单管理', '2', 'menu/index', null, '', '0001');
+INSERT INTO `menu` VALUES ('22', '修改用户', '2', 'user/update', null, '', '0000');
+INSERT INTO `menu` VALUES ('23', '编辑角色', '2', 'item/update', null, '', '0000');
+INSERT INTO `menu` VALUES ('24', '删除角色', '2', 'item/delete', null, '', '0000');
+INSERT INTO `menu` VALUES ('25', '创建角色', '2', 'item/create', null, '', '0000');
+INSERT INTO `menu` VALUES ('26', '创建菜单', '2', 'menu/create', null, '', '0000');
+INSERT INTO `menu` VALUES ('27', '编辑菜单', '2', 'menu/update', null, '', '0000');
+INSERT INTO `menu` VALUES ('28', '删除菜单', '2', 'menu/delete', null, '', '0000');
+INSERT INTO `menu` VALUES ('30', '新增用户', '2', 'user/create', null, '', '0000');
+INSERT INTO `menu` VALUES ('31', '删除用户', '2', 'user/delete', null, '', '0000');
 
 -- ----------------------------
 -- Table structure for migration
@@ -218,12 +231,13 @@ CREATE TABLE `user` (
   `created_at` int(11) NOT NULL,
   `updated_at` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
 INSERT INTO `user` VALUES ('5', 'lzkong1029', 'eIZI7o4ImcGhpt1rSUTDCFmxX73Sai1H', '$2y$13$nyW8jOqxsbfzzOFtOozeZ.pJQHlXxu66DMGxOaQUbUlsiUcOg1XoK', '', '272067517@qq.com', '10', '10', '1458285255', '1458285255');
+INSERT INTO `user` VALUES ('18', 'test', '4QmEhU-YDlKgZwElMy-mmtcsDLeRrHaX', '$2y$13$Wp5TUMI3ahglIN40P98VneAOusMPpp/CsWPls5rcH.L5JjUk7APFi', null, '272067517@qq', '10', '10', '1460510925', '0');
 
 -- ----------------------------
 -- Procedure structure for test1

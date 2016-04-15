@@ -18,15 +18,21 @@ $this->title = '更新用户 ';
                 <?= $form->field($model, 'id')->hiddenInput()->label('') ?>
 
                 <?= $form->field($model, 'username')->textInput(['readonly'=>true])->label('用户名') ?>
+                <?php if($model->username =='admin'):?>
+                    <?= $form->field($model, 'auth_key_new')->textInput(['value'=>'','readonly'=>true])->label('密码')?>
+                <?php else:?>
+                    <?= $form->field($model, 'auth_key_new')->textInput(['value'=>''])->label('密码')?>
+                <?php endif;?>
 
-                <?= $form->field($model, 'auth_key_new')->textInput(['value'=>''])->label('密码')?>
 
                 <?= $form->field($model, 'auth_key')->hiddenInput()->label(false)?>
 
                 <?= $form->field($model, 'email')->textInput(['email' => true])->label('邮箱')?>
-
-                <?= $form->field($model->usergroup, 'item_name' )->dropDownList($item)->label('用户组')?>
-
+                <?php if($model->username =='admin'):?>
+                    <?= $form->field($model->usergroup, 'item_name' )->dropDownList($item,['disabled'=>true])->label('用户组')?>
+                <?php else:?>
+                    <?= $form->field($model->usergroup, 'item_name' )->dropDownList($item)->label('用户组')?>
+                <?php endif;?>
                 <div class="form-group">
                     <?= Html::submitButton('保存', ['class' => 'btn btn-primary']) ?>
                 </div>

@@ -33,6 +33,7 @@ class Menu extends \yii\db\ActiveRecord
             [['name'], 'required'],
             [['parent', 'sort'], 'integer'],
             [['data'], 'string'],
+            [['status'], 'string'],
             [['name'], 'string', 'max' => 128],
             [['route'], 'string', 'max' => 256],
         ];

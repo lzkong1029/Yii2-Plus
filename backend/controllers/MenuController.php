@@ -44,7 +44,8 @@ class MenuController extends Controller
      */
     public function actionIndex()
     {
-        $menu = Menu::getMenuList();
+        $menu = new Menu();
+        $menu = $menu->getMenuList();
 
         return $this->render('index', [
             'menu' => $menu

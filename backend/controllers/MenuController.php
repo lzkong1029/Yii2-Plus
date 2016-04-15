@@ -86,6 +86,11 @@ class MenuController extends Controller
                 $createPost = $auth->createPermission($name);
                 $createPost->description = '创建了[' . $name. ']权限';
                 $auth->add($createPost);
+
+                //将权限赋给角色
+                $parent = $auth->createRole('超级管理员');                //创建角色对象
+                $child = $auth->createPermission($name);     //创建权限对象
+                $auth->addChild($parent, $child);                           //添加对应关系
             }
             return $this->redirect(['index']);
         } else {

@@ -15,7 +15,7 @@ $this->title = '更新用户 ';
             <div class="auth-item-form col-sm-4">
                 <?php $form = ActiveForm::begin(); ?>
 
-                <?= $form->field($model, 'id')->hiddenInput()->label('') ?>
+                <?= $form->field($model, 'id')->hiddenInput()->label('')?>
 
                 <?= $form->field($model, 'username')->textInput(['readonly'=>true])->label('用户名') ?>
                 <?php if($model->username =='admin'):?>

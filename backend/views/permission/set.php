@@ -28,7 +28,11 @@ $this->params['breadcrumbs'][] = $this->title;
 
                             <?php foreach($items as $v):?>
                                 <?php if($vo['id'] == $v->permissionName['parent']):?>
-                                    <label><input type="checkbox" class="chk" name="permission[]" value="<?=$v->name?>"><?=($v->permissionName['name'] ==''? $v->name : $v->permissionName['name'])?></label>&nbsp;&nbsp;
+                                    <?php if($id == '超级管理员'):?>
+                                    <label><input type="checkbox" class="chk" disabled name="permission[]" value="<?=$v->name?>"><?=($v->permissionName['name'] ==''? $v->name : $v->permissionName['name'])?></label>&nbsp;&nbsp;
+                                    <?php else:?>
+                                        <label><input type="checkbox" class="chk" name="permission[]" value="<?=$v->name?>"><?=($v->permissionName['name'] ==''? $v->name : $v->permissionName['name'])?></label>&nbsp;&nbsp;
+                                    <?php endif;?>
                                 <?php endif;?>
                             <?php endforeach;?>
                         </div>

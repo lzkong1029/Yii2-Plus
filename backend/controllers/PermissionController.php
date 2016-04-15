@@ -37,7 +37,6 @@ class PermissionController extends Controller
         $Permission = $auth->getPermissionsByRole($id);
         $items = AuthItem::find()->joinWith('permissionName')->where(['type' => '2'])->all();
         $menu = Menu::find()->where(['parent'=>'0'])->all();
-
         if (Yii::$app->request->post()) {
             $post = Yii::$app->request->post();
             $parent = $auth->createRole($post['parent']);     //创建角色对象

@@ -24,7 +24,6 @@ $this->title = '更新用户 ';
                     <?= $form->field($model, 'auth_key_new')->textInput(['value'=>''])->label('密码')?>
                 <?php endif;?>
 
-
                 <?= $form->field($model, 'auth_key')->hiddenInput()->label(false)?>
 
                 <?= $form->field($model, 'email')->textInput(['email' => true])->label('邮箱')?>

@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50547
 File Encoding         : 65001
 
-Date: 2016-04-15 09:42:38
+Date: 2016-04-15 10:35:35
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -35,9 +35,10 @@ INSERT INTO `auth_assignment` VALUES ('普通管理员', '14', '1460425467');
 INSERT INTO `auth_assignment` VALUES ('普通管理员', '15', '1460425522');
 INSERT INTO `auth_assignment` VALUES ('普通管理员', '16', '1460426459');
 INSERT INTO `auth_assignment` VALUES ('普通管理员', '17', '1460441363');
-INSERT INTO `auth_assignment` VALUES ('普通管理员', '18', '1460510925');
+INSERT INTO `auth_assignment` VALUES ('普通管理员', '18', '1460687341');
+INSERT INTO `auth_assignment` VALUES ('普通管理员', '19', '1460687688');
 INSERT INTO `auth_assignment` VALUES ('普通管理员', '4', null);
-INSERT INTO `auth_assignment` VALUES ('超级管理员', '5', null);
+INSERT INTO `auth_assignment` VALUES ('超级管理员', '5', '1460687522');
 
 -- ----------------------------
 -- Table structure for auth_item
@@ -141,7 +142,7 @@ CREATE TABLE `log` (
   `data` varchar(64) DEFAULT NULL,
   `create_time` varchar(32) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of log
@@ -158,6 +159,9 @@ INSERT INTO `log` VALUES ('9', 'test', '127.0.0.1', '', '1460511126');
 INSERT INTO `log` VALUES ('10', 'lzkong1029', '127.0.0.1', '', '1460518525');
 INSERT INTO `log` VALUES ('11', 'test', '127.0.0.1', '', '1460529644');
 INSERT INTO `log` VALUES ('12', 'lzkong1029', '127.0.0.1', '', '1460683222');
+INSERT INTO `log` VALUES ('13', 'test', '127.0.0.1', '', '1460687319');
+INSERT INTO `log` VALUES ('14', 'lzkong1029', '127.0.0.1', '', '1460687331');
+INSERT INTO `log` VALUES ('15', 'admin', '127.0.0.1', '', '1460687467');
 
 -- ----------------------------
 -- Table structure for menu
@@ -231,13 +235,13 @@ CREATE TABLE `user` (
   `created_at` int(11) NOT NULL,
   `updated_at` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of user
 -- ----------------------------
-INSERT INTO `user` VALUES ('5', 'lzkong1029', 'eIZI7o4ImcGhpt1rSUTDCFmxX73Sai1H', '$2y$13$nyW8jOqxsbfzzOFtOozeZ.pJQHlXxu66DMGxOaQUbUlsiUcOg1XoK', '', '272067517@qq.com', '10', '10', '1458285255', '1458285255');
-INSERT INTO `user` VALUES ('18', 'test', '4QmEhU-YDlKgZwElMy-mmtcsDLeRrHaX', '$2y$13$Wp5TUMI3ahglIN40P98VneAOusMPpp/CsWPls5rcH.L5JjUk7APFi', null, '272067517@qq', '10', '10', '1460510925', '0');
+INSERT INTO `user` VALUES ('5', 'admin', 'pRAAzd8yMtrkTFyT4fYoNuFpDDF32BLb', '$2y$13$rdHxNkxbOroxDU7hTcjlXuwYLTNxZlJVYKWx379.ff//DZzkaLXaq', null, '272067517@qq.com', '10', '10', '1460510925', '0');
+INSERT INTO `user` VALUES ('19', 'test', 'snGASMxkEQhwznuKsOQusmnc4YBGfnU7', '$2y$13$VfGUg4z/cFPiJBDHSdKF2O8PD.jNpFIU1yJQderYlVEAVlKAtKW1m', null, '272067517@qq.com', '10', '10', '1460687673', '0');
 
 -- ----------------------------
 -- Procedure structure for test1

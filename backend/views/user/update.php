@@ -19,6 +19,10 @@ $this->title = '更新用户 ';
 
                 <?= $form->field($model, 'username')->textInput(['readonly'=>true])->label('用户名') ?>
 
+                <?= $form->field($model, 'auth_key_new')->textInput(['value'=>''])->label('密码')?>
+
+                <?= $form->field($model, 'auth_key')->hiddenInput()->label(false)?>
+
                 <?= $form->field($model, 'email')->textInput(['email' => true])->label('邮箱')?>
 
                 <?= $form->field($model->usergroup, 'item_name' )->dropDownList($item)->label('用户组')?>

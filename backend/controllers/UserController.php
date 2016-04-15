@@ -96,12 +96,22 @@ class UserController extends \yii\web\Controller
             $item_one[$value]=$value;
         }
         $model1 = $this->findModel($id);
-        if ($model1->load(Yii::$app->request->post()) && $model1->save()) {
+        if ($model1->load(Yii::$app->request->post())) {
             $post = Yii::$app->request->post();
+            //更新密码
+            if(!empty($post['User']['auth_key_new'])){
+                $model1->setPassword($post['User']['auth_key_new']);
+                $model1->generateAuthKey();
+            }else{
+                $model1->auth_key = $post['User']['auth_key'];
+            }
+            $model1->save($post);
+            //分配角色
             $role = $auth->createRole($post['AuthAssignment']['item_name']);                //创建角色对象
             $user_id = $id;                                             //获取用户id，此处假设用户id=1
             $auth->revokeAll($user_id);
             $auth->assign($role, $user_id);                           //添加对应关系
+
             return $this->redirect(['user/update', 'id' => $model1->id]);
         }
 

@@ -11,11 +11,13 @@ use yii\widgets\ActiveForm;
 <div class="auth-item-form col-sm-4">
 
     <?php $form = ActiveForm::begin(); ?>
-
-    <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
-
-    <?= $form->field($model, 'type' )->dropDownList(['1' =>'角色' ,'2' =>'权限' ])?>
-
+    <?php if($model->name =='超级管理员'):?>
+        <?= $form->field($model, 'name')->textInput(['maxlength' => true,'readonly'=>true]) ?>
+        <?= $form->field($model, 'type' )->dropDownList(['1' =>'角色' ,'2' =>'权限'],['disabled'=>true])?>
+    <?php else:?>
+        <?= $form->field($model, 'name')->textInput(['maxlength' => true]) ?>
+        <?= $form->field($model, 'type' )->dropDownList(['1' =>'角色' ,'2' =>'权限'])?>
+    <?php endif;?>
     <?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
 
     <?/*= $form->field($model, 'rule_name')->textInput(['maxlength' => true]) */?><!--

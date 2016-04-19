@@ -50,7 +50,9 @@ $this->params['breadcrumbs'][] = $this-> title;
                             <td >
                                 <a class="btn btn-primary btn-xs" href= "<?= Url::to([ 'update', 'id'=>$list[ 'name']]); ?>" ><i class="fa fa-edit"></i>编辑 </a >
                                 <a class="btn btn-success btn-xs" href= "<?= Url::toRoute([ 'permission/set', 'id'=>$list[ 'name']]); ?>" ><i class="fa fa-unlock-alt"></i>权限 </a >
+                                <?php if($list['name'] != '超级管理员'):?>
                                 <a class ="del btn btn-default btn-xs" href= "javaScript:;"><i class="fa fa-close"></i>删除</a >
+                                <?php endif;?>
                             </td >
                         </tr >
                     <?php endforeach; ?>

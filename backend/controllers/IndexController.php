@@ -20,7 +20,8 @@ class IndexController extends \yii\web\Controller
 
     public function actionWelcome()
     {
-        $log = Log::find()->limit(20)->asArray()->all();
+        //最近登录记录
+        $log = Log::find()->limit(20)->orderBy('id desc')->asArray()->all();
         return $this->render('welcome',[
             'log' => $log,
         ]);

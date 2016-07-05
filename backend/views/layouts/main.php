@@ -30,14 +30,14 @@ use common\widgets\Alert;
     <meta http-equiv="refresh" content="0;ie.html" />
     <![endif]-->
     <link rel="shortcut icon" href="favicon.ico">
-    <link href="css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
-    <link href="css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
-    <link href="css/animate.min.css" rel="stylesheet">
-    <link href="css/style.min862f.css?v=4.1.0" rel="stylesheet">
-    <link href="css/site.css" rel="stylesheet">
+    <link href="/y++/backend/web/css/bootstrap.min14ed.css?v=3.3.6" rel="stylesheet">
+    <link href="/y++/backend/web/css/font-awesome.min93e3.css?v=4.4.0" rel="stylesheet">
+    <link href="/y++/backend/web/css/animate.min.css" rel="stylesheet">
+    <link href="/y++/backend/web/css/style.min862f.css?v=4.1.0" rel="stylesheet">
+    <link href="/y++/backend/web/css/site.css" rel="stylesheet">
 
 
-    <script src="js/jquery.min.js"></script>
+    <script src="/y++/backend/web/js/jquery.min.js"></script>
     <?php $this->head() ?>
 </head>
 <body class="fixed-sidebar full-height-layout gray-bg">

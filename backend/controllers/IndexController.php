@@ -26,3 +26,4 @@ class IndexController extends \yii\web\Controller
         ]);
     }
 }
+

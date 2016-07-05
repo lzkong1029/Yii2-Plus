@@ -13,7 +13,7 @@ $this->params['breadcrumbs'][] = $this->title;
     <div class="ibox float-e-margins">
         <div class="ibox-content">
             <p>
-                <?= Html::a('创建菜单', ['create'], ['class' => 'btn btn-primary']) ?>
+                <?= Html::a('创建菜单', ['create'], ['class' => 'btn btn-sm btn-primary']) ?>
             </p>
 
             <div class="row">

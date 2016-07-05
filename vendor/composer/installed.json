@@ -10,7 +10,7 @@
         },
         "dist": {
             "type": "zip",
-            "url": "https://packagist.phpcomposer.com/files/yiisoft/yii2-composer/d33d1046a5951f2f7823fe343f28ddc58b3421a4.zip",
+            "url": "https://api.github.com/repos/yiisoft/yii2-composer/zipball/d33d1046a5951f2f7823fe343f28ddc58b3421a4",
             "reference": "d33d1046a5951f2f7823fe343f28ddc58b3421a4",
             "shasum": ""
         },
@@ -59,7 +59,7 @@
         },
         "dist": {
             "type": "zip",
-            "url": "http://packagist.phpcomposer.com/files/ezyang/htmlpurifier/ae1828d955112356f7677c465f94f7deb7d27a40.zip",
+            "url": "https://api.github.com/repos/ezyang/htmlpurifier/zipball/ae1828d955112356f7677c465f94f7deb7d27a40",
             "reference": "ae1828d955112356f7677c465f94f7deb7d27a40",
             "shasum": ""
         },
@@ -265,7 +265,7 @@
         },
         "dist": {
             "type": "zip",
-            "url": "http://packagist.phpcomposer.com/files/cebe/markdown/e4499350d8a94c4c693a7e784295eff7a717ae67.zip",
+            "url": "https://api.github.com/repos/cebe/markdown/zipball/e4499350d8a94c4c693a7e784295eff7a717ae67",
             "reference": "e4499350d8a94c4c693a7e784295eff7a717ae67",
             "shasum": ""
         },
@@ -327,7 +327,7 @@
         },
         "dist": {
             "type": "zip",
-            "url": "https://packagist.phpcomposer.com/files/yiisoft/yii2-framework/96ca6c7b71f9e93ab6cd31ba49090bdd2c3d5739.zip",
+            "url": "https://api.github.com/repos/yiisoft/yii2-framework/zipball/96ca6c7b71f9e93ab6cd31ba49090bdd2c3d5739",
             "reference": "96ca6c7b71f9e93ab6cd31ba49090bdd2c3d5739",
             "shasum": ""
         },
@@ -423,7 +423,7 @@
         },
         "dist": {
             "type": "zip",
-            "url": "http://packagist.phpcomposer.com/files/swiftmailer/swiftmailer/fffbc0e2a7e376dbb0a4b5f2ff6847330f20ccf9.zip",
+            "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/fffbc0e2a7e376dbb0a4b5f2ff6847330f20ccf9",
             "reference": "fffbc0e2a7e376dbb0a4b5f2ff6847330f20ccf9",
             "shasum": ""
         },
@@ -478,7 +478,7 @@
         },
         "dist": {
             "type": "zip",
-            "url": "https://packagist.phpcomposer.com/files/yiisoft/yii2-swiftmailer/2cca1bb86444a6438b0720f8c60120a400982366.zip",
+            "url": "https://api.github.com/repos/yiisoft/yii2-swiftmailer/zipball/2cca1bb86444a6438b0720f8c60120a400982366",
             "reference": "2cca1bb86444a6438b0720f8c60120a400982366",
             "shasum": ""
         },
@@ -530,7 +530,7 @@
         },
         "dist": {
             "type": "zip",
-            "url": "https://packagist.phpcomposer.com/files/yiisoft/yii2-codeception/ee239c244fd011f11c8827f97ebe7600d03f1841.zip",
+            "url": "https://api.github.com/repos/yiisoft/yii2-codeception/zipball/ee239c244fd011f11c8827f97ebe7600d03f1841",
             "reference": "ee239c244fd011f11c8827f97ebe7600d03f1841",
             "shasum": ""
         },
@@ -628,7 +628,7 @@
         },
         "dist": {
             "type": "zip",
-            "url": "https://packagist.phpcomposer.com/files/yiisoft/yii2-bootstrap/4133d6b26f48615de38ea1ec04eb00c4b7057bc9.zip",
+            "url": "https://api.github.com/repos/yiisoft/yii2-bootstrap/zipball/4133d6b26f48615de38ea1ec04eb00c4b7057bc9",
             "reference": "4133d6b26f48615de38ea1ec04eb00c4b7057bc9",
             "shasum": ""
         },
@@ -680,7 +680,7 @@
         },
         "dist": {
             "type": "zip",
-            "url": "https://packagist.phpcomposer.com/files/yiisoft/yii2-debug/a29ed1039604a576329c8d33138d29065d9f98d5.zip",
+            "url": "https://api.github.com/repos/yiisoft/yii2-debug/zipball/a29ed1039604a576329c8d33138d29065d9f98d5",
             "reference": "a29ed1039604a576329c8d33138d29065d9f98d5",
             "shasum": ""
         },
@@ -758,7 +758,7 @@
         },
         "dist": {
             "type": "zip",
-            "url": "http://packagist.phpcomposer.com/files/phpspec/php-diff/30e103d19519fe678ae64a60d77884ef3d71b28a.zip",
+            "url": "https://api.github.com/repos/phpspec/php-diff/zipball/30e103d19519fe678ae64a60d77884ef3d71b28a",
             "reference": "30e103d19519fe678ae64a60d77884ef3d71b28a",
             "shasum": ""
         },
@@ -794,7 +794,7 @@
         },
         "dist": {
             "type": "zip",
-            "url": "https://packagist.phpcomposer.com/files/yiisoft/yii2-gii/ce42838abcbef076ebaf46147671d518ae69d028.zip",
+            "url": "https://api.github.com/repos/yiisoft/yii2-gii/zipball/ce42838abcbef076ebaf46147671d518ae69d028",
             "reference": "ce42838abcbef076ebaf46147671d518ae69d028",
             "shasum": ""
         },
@@ -849,7 +849,7 @@
         },
         "dist": {
             "type": "zip",
-            "url": "https://packagist.phpcomposer.com/files/fzaninotto/Faker/86ec14457afce95c9ad57ee8394c57f57a1aaf43.zip",
+            "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/86ec14457afce95c9ad57ee8394c57f57a1aaf43",
             "reference": "86ec14457afce95c9ad57ee8394c57f57a1aaf43",
             "shasum": ""
         },
@@ -901,7 +901,7 @@
         },
         "dist": {
             "type": "zip",
-            "url": "https://packagist.phpcomposer.com/files/yiisoft/yii2-faker/186c77214e0a4b75f10380b4e6e5f82788922cb7.zip",
+            "url": "https://api.github.com/repos/yiisoft/yii2-faker/zipball/186c77214e0a4b75f10380b4e6e5f82788922cb7",
             "reference": "186c77214e0a4b75f10380b4e6e5f82788922cb7",
             "shasum": ""
         },
@@ -937,6 +937,66 @@
             "Fixture",
             "faker",
             "yii2"
+        ]
+    },
+    {
+        "name": "mdmsoft/yii2-admin",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/mdmsoft/yii2-admin.git",
+            "reference": "f1711779ea3c19e334d9774d223a9682e693b31e"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/mdmsoft/yii2-admin/zipball/f1711779ea3c19e334d9774d223a9682e693b31e",
+            "reference": "f1711779ea3c19e334d9774d223a9682e693b31e",
+            "shasum": ""
+        },
+        "require": {
+            "yiisoft/yii2": "~2.0.7"
+        },
+        "require-dev": {
+            "yiisoft/yii2-codeception": "~2.0"
+        },
+        "suggest": {
+            "yiisoft/yii2-bootstrap": "Used when using layout 'left-menu', 'right-menu' or 'top-menu'"
+        },
+        "time": "2016-05-20 23:38:13",
+        "type": "yii2-extension",
+        "extra": {
+            "branch-alias": {
+                "dev-1.0.master": "1.0.x-dev",
+                "dev-master": "2.x-dev"
+            },
+            "asset-installer-paths": {
+                "npm-asset-library": "vendor/npm",
+                "bower-asset-library": "vendor/bower"
+            }
+        },
+        "installation-source": "dist",
+        "autoload": {
+            "psr-4": {
+                "mdm\\admin\\": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "BSD-3-Clause"
+        ],
+        "authors": [
+            {
+                "name": "Misbahul Munir",
+                "email": "misbahuldmunir@gmail.com"
+            }
+        ],
+        "description": "RBAC Auth manager for Yii2 ",
+        "keywords": [
+            "admin",
+            "auth",
+            "rbac",
+            "yii"
         ]
     }
 ]

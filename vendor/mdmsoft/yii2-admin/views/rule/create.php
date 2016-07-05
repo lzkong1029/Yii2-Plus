@@ -9,14 +9,19 @@ $this->title = Yii::t('rbac-admin', 'Create Rule');
 $this->params['breadcrumbs'][] = ['label' => Yii::t('rbac-admin', 'Rules'), 'url' => ['index']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="auth-item-create">
+<div class="wrapper wrapper-content">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <div class="ibox-content">
+        <div class="auth-item-create">
 
-    <?=
-    $this->render('_form', [
-        'model' => $model,
-    ]);
-    ?>
+            <h1><?= Html::encode($this->title) ?></h1>
 
+            <?=
+            $this->render('_form', [
+                'model' => $model,
+            ]);
+            ?>
+
+        </div>
+    </div>
 </div>

@@ -12,27 +12,32 @@ use yii\widgets\Pjax;
 $this->title = Yii::t('rbac-admin', 'Rules');
 $this->params['breadcrumbs'][] = $this->title;
 ?>
-<div class="role-index">
+<div class="wrapper wrapper-content">
 
-    <h1><?= Html::encode($this->title) ?></h1>
+    <div class="ibox-content">
+        <div class="role-index">
 
-    <p>
-        <?= Html::a(Yii::t('rbac-admin', 'Create Rule'), ['create'], ['class' => 'btn btn-success']) ?>
-    </p>
+            <h1><?= Html::encode($this->title) ?></h1>
 
-    <?=
-    GridView::widget([
-        'dataProvider' => $dataProvider,
-        'filterModel' => $searchModel,
-        'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
-            [
-                'attribute' => 'name',
-                'label' => Yii::t('rbac-admin', 'Name'),
-            ],
-            ['class' => 'yii\grid\ActionColumn',],
-        ],
-    ]);
-    ?>
+            <p>
+                <?= Html::a(Yii::t('rbac-admin', 'Create Rule'), ['create'], ['class' => 'btn btn-sm btn-info']) ?>
+            </p>
 
+            <?=
+            GridView::widget([
+                'dataProvider' => $dataProvider,
+                'filterModel' => $searchModel,
+                'columns' => [
+                    ['class' => 'yii\grid\SerialColumn'],
+                    [
+                        'attribute' => 'name',
+                        'label' => Yii::t('rbac-admin', 'Name'),
+                    ],
+                    ['class' => 'yii\grid\ActionColumn',],
+                ],
+            ]);
+            ?>
+
+        </div>
+    </div>
 </div>

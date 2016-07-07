@@ -8,6 +8,8 @@ use yii\filters\AccessControl;
 use common\models\LoginForm;
 use backend\models\Menu;
 
+use backend\components\Helper;
+
 /**
  * Site controller
  */

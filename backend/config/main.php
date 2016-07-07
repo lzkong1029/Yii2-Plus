@@ -17,10 +17,10 @@ return [
     ],
 
     'as access' => [
-        //ACF肯定是要加的,加了才回去自动验证是否有权限
+        //ACF肯定要加,加了才会自动验证是否有权限
         'class' => 'mdm\admin\components\AccessControl',
         'allowActions' => [
-            //这里是允许访问的action
+            //允许访问的action
             //controller/action
             //'*'
             'site/*',

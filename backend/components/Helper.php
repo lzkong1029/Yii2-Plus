@@ -11,7 +11,7 @@ namespace backend\components;
 
 class Helper {
 
-    public function hello(){
+    public static function hello(){
         echo 'hello';
     }
 

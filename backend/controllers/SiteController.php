@@ -58,10 +58,12 @@ class SiteController extends Controller
 
     public function actionIndex()
     {
+        //var_dump(Yii::$app);exit;
         $user_id=Yii::$app->user->identity->getId();
         $user_info = Yii::$app->authManager->getRolesByUser($user_id);
         $menu = new Menu();
         $menu = $menu->getLeftMenuList();
+        //print_r($menu);exit;
         return $this->render('index',[
             'menu' => $menu,
             'user_info' => key($user_info)

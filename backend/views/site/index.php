@@ -38,18 +38,38 @@ $this->title = 'Y+';
                         </div>
                     </li>
 
-                    <?php foreach($menu as $vo):?>
+                    <?php  foreach($menu as $vo):?>
+                        <?php $data = json_decode($vo['data'], true);?>
                         <li>
                             <a href="#">
-                                <i class="fa fa-home"></i>
+                                <i class="<?=$data['icon']?>"></i>
                                 <span class="nav-label"><?= $vo['name']?></span>
                                 <span class="fa arrow"></span>
                             </a>
                             <ul class="nav nav-second-level">
-                                <?php if(!empty($vo['_child'])): foreach($vo['_child'] as $v):?>
-                                    <li>
-                                        <a class="J_menuItem" href="<?= Url::toRoute($v['route']);?>" data-index="0"><?= $v['name']?></a>
-                                    </li>
+                                <?php if(!empty($vo['_child'])): foreach($vo['_child'] as $v):?><!--二级菜单-->
+                                    <?php $data2 = json_decode($v['data'], true);?>
+
+                                        <li>
+                                            <?php if(!empty($v['_child'])): foreach($v['_child'] as $v3):?><!--三级菜单-->
+                                                <?php $data3 = json_decode($v3['data'], true);?>
+
+                                            <a href="#">
+                                                <i class="<?=$data2['icon']?>"></i>
+                                                <span class="nav-label"><?= $v['name']?></span>
+                                                <span class="fa arrow"></span>
+                                            </a>
+                                            <ul class="nav nav-third-level collapse">
+                                                <li>
+                                                    <a class="J_menuItem" href="<?= Url::toRoute($v3['route']);?>" data-index="0"><?= $v3['name']?></a>
+                                                </li>
+                                            </ul>
+
+                                            <? endforeach; else: ?>
+                                                <a class="J_menuItem" href="<?= Url::toRoute($v['route']);?>" data-index="0"><?= $v['name']?></a>
+                                            <? endif;?>
+
+                                        </li>
                                 <?php endforeach; endif;?>
                             </ul>
                         </li>

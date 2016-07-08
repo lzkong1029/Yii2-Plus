@@ -8,6 +8,7 @@ $this->title = 'My Yii Application';
 ?>
 <div class="wrapper wrapper-content">
     <div class="row">
+        <?php if(\Yii::$app->user->can('/site/index')):?> <!--判断是否有‘/site/index’权限，有则显示，无则隐藏-->
         <div class="col-sm-3">
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
@@ -22,6 +23,7 @@ $this->title = 'My Yii Application';
                 </div>
             </div>
         </div>
+        <?php endif;?>
         <div class="col-sm-3">
             <div class="ibox float-e-margins">
                 <div class="ibox-title">

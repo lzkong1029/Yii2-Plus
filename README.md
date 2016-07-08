@@ -21,5 +21,6 @@ Yii2 + Bootstrap搭建的后台管理系统，集成用户中心模块和RBAC权
 ![image](https://raw.githubusercontent.com/lzkong1029/Yii2-Plus/master/screenshot/login.png) <br>
 ![image](https://raw.githubusercontent.com/lzkong1029/Yii2-Plus/master/screenshot/index.png) <br>
 ![image](https://raw.githubusercontent.com/lzkong1029/Yii2-Plus/master/screenshot/menu.png) <br>
+![image](https://raw.githubusercontent.com/lzkong1029/Yii2-Plus/master/screenshot/route.png) <br>
 ![image](https://raw.githubusercontent.com/lzkong1029/Yii2-Plus/master/screenshot/user.png) <br>
 

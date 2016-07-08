@@ -17,7 +17,7 @@ $this->title = 'Y+';
                 <ul class="nav" id="side-menu">
                     <li class="nav-header">
                         <div class="dropdown profile-element">
-                            <span><img alt="image" class="img-circle" src="img/profile_small.jpg" /></span>
+                            <span><img alt="image" class="img-circle" src="../web/img/profile_small.jpg" /></span>
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <span class="clear">
                                <span class="block m-t-xs"><strong class="font-bold"><?= Yii::$app->user->identity->username ?></strong></span>
@@ -84,7 +84,7 @@ $this->title = 'Y+';
             <div class="row border-bottom">
                 <nav class="navbar navbar-static-top" role="navigation" style="margin-bottom: 0">
                     <div class="navbar-header"><a class="navbar-minimalize minimalize-styl-2 btn btn-primary " href="#"><i class="fa fa-bars"></i> </a>
-                        <form role="search" class="navbar-form-custom" method="post" action="http://www.zi-han.net/theme/hplus/search_results.html">
+                        <form role="search" class="navbar-form-custom" method="post" action="#">
                             <div class="form-group">
                                 <input type="text" placeholder="请输入您需要查找的内容 …" class="form-control" name="top-search" id="top-search">
                             </div>
@@ -227,11 +227,11 @@ $this->title = 'Y+';
         <!--右侧边栏结束-->
 
     </div>
-    <script src="/y++/backend/web/js/jquery.min.js?v=2.1.4"></script>
-    <script src="/y++/backend/web/js/bootstrap.min.js?v=3.3.6"></script>
-    <script src="/y++/backend/web/js/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="/y++/backend/web/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-    <script src="/y++/backend/web/js/plugins/layer/layer.min.js"></script>
-    <script src="/y++/backend/web/js/hplus.min.js?v=4.1.0"></script>
-    <script type="text/javascript" src="/y++/backend/web/js/contabs.min.js"></script>
-    <script src="/y++/backend/web/js/plugins/pace/pace.min.js"></script>
+    <script src="../web/js/jquery.min.js?v=2.1.4"></script>
+    <script src="../web/js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="../web/js/plugins/metisMenu/jquery.metisMenu.js"></script>
+    <script src="../web/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+    <script src="../web/js/plugins/layer/layer.min.js"></script>
+    <script src="../web/js/hplus.min.js?v=4.1.0"></script>
+    <script type="text/javascript" src="../web/js/contabs.min.js"></script>
+    <script src="../web/js/plugins/pace/pace.min.js"></script>

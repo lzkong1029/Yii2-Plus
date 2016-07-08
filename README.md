@@ -15,11 +15,8 @@ Yii2 + Bootstrap搭建的后台管理系统，集成用户中心模块和RBAC权
 用户名密码：admin   admin888
 
 #前台：
-<<<<<<< HEAD
-前台地址：http://127.0.0.1/y++/frontend/web/index.php
+前台地址：http://127.0.0.1/yii2plus/frontend/web/index.php
 
 #示例：
-![image](https://github.com/lzkong1029/Yii2-Plus/master/screenshots/login.jpg)
-=======
-前台地址：http://127.0.0.1/yii2plus/frontend/web/index.php
->>>>>>> a37958d6a431d195ef2eb1751366b7b7810e73ca
+![image](https://github.com/lzkong1029/Yii2-Plus/tree/master/screenshot/login.jpg)
+

@@ -16,3 +16,6 @@ Yii2 + Bootstrap搭建的后台管理系统，集成用户中心模块和RBAC权
 
 #前台：
 前台地址：http://127.0.0.1/y++/frontend/web/index.php
+
+#示例：
+![image](https://github.com/lzkong1029/Yii2-Plus/master/screenshots/login.jpg)

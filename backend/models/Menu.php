@@ -70,6 +70,8 @@ class Menu extends \yii\db\ActiveRecord
         $uid = Yii::$app->user->identity->getId();
         $auth = Yii::$app->authManager;
         $Roles = $auth->getRolesByUser($uid);
+        //var_dump($Roles);exit;
+
         foreach($Roles as $vo){
             $name = $vo->name;
         }

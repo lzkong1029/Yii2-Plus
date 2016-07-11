@@ -63,7 +63,7 @@ class SiteController extends Controller
         $user_info = Yii::$app->authManager->getRolesByUser($user_id);
         $menu = new Menu();
         $menu = $menu->getLeftMenuList();
-        //print_r($menu);exit;
+        //var_dump(array_key_exists('_child',$menu[0]));exit;
         return $this->render('index',[
             'menu' => $menu,
             'user_info' => key($user_info)

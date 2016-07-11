@@ -17,7 +17,7 @@ $this->title = 'Y+';
                 <ul class="nav" id="side-menu">
                     <li class="nav-header">
                         <div class="dropdown profile-element">
-                            <span><img alt="image" class="img-circle" src="../web/img/profile_small.jpg" /></span>
+                            <span><img alt="image" class="img-circle" src="<?php echo Url::to('@web/img/profile_small.jpg');?>" /></span>
                             <a data-toggle="dropdown" class="dropdown-toggle" href="#">
                                 <span class="clear">
                                <span class="block m-t-xs"><strong class="font-bold"><?= Yii::$app->user->identity->username ?></strong></span>
@@ -227,11 +227,12 @@ $this->title = 'Y+';
         <!--右侧边栏结束-->
 
     </div>
-    <script src="../web/js/jquery.min.js?v=2.1.4"></script>
-    <script src="../web/js/bootstrap.min.js?v=3.3.6"></script>
-    <script src="../web/js/plugins/metisMenu/jquery.metisMenu.js"></script>
-    <script src="../web/js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
-    <script src="../web/js/plugins/layer/layer.min.js"></script>
-    <script src="../web/js/hplus.min.js?v=4.1.0"></script>
-    <script type="text/javascript" src="../web/js/contabs.min.js"></script>
-    <script src="../web/js/plugins/pace/pace.min.js"></script>
+
+<?=Html::jsFile('@web/js/jquery.min.js')?>
+<?=Html::jsFile('@web/js/bootstrap.min.js')?>
+<?=Html::jsFile('@web/js/plugins/metisMenu/jquery.metisMenu.js')?>
+<?=Html::jsFile('@web/js/plugins/slimscroll/jquery.slimscroll.min.js')?>
+<?=Html::jsFile('@web/js/plugins/layer/layer.min.js')?>
+<?=Html::jsFile('@web/js/hplus.min.js')?>
+<?=Html::jsFile('@web/js/contabs.min.js')?>
+<?=Html::jsFile('@web/js/plugins/pace/pace.min.js')?>

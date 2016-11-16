@@ -26,20 +26,6 @@ $this->title = 'My Yii Application';
             </div>
         </div>-->
         <?php endif;?>
-        <!--<div class="col-sm-3">
-            <div class="ibox float-e-margins">
-                <div class="ibox-title">
-                    <span class="label label-info pull-right">全年</span>
-                    <h5>订单</h5>
-                </div>
-                <div class="ibox-content">
-                    <h1 class="no-margins">275,800</h1>
-                    <div class="stat-percent font-bold text-info">20% <i class="fa fa-level-up"></i>
-                    </div>
-                    <small>新订单</small>
-                </div>
-            </div>
-        </div>-->
         <div class="col-sm-6">
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
@@ -48,8 +34,6 @@ $this->title = 'My Yii Application';
                 </div>
                 <div class="ibox-content">
                     <h1 class="no-margins"><?=\backend\components\Helper::getHistoryVisNum()?></h1>
-                    <!--<div class="stat-percent font-bold text-navy">44% <i class="fa fa-level-up"></i>
-                    </div>-->
                     <small>访客</small>
                 </div>
             </div>
@@ -62,12 +46,15 @@ $this->title = 'My Yii Application';
                 </div>
                 <div class="ibox-content">
                     <h1 class="no-margins"><?=\backend\components\Helper::getMonthHistoryVisNum()?></h1>
-                    <!--<div class="stat-percent font-bold text-danger">38% <i class="fa fa-level-down"></i>
-                    </div>-->
                     <small><?= date('m')?>月</small>
                 </div>
             </div>
         </div>
+
+        <div class="col-sm-12">
+            <div id="history"></div>
+        </div>
+
     </div>
 
     <div class="row">
@@ -111,3 +98,54 @@ $this->title = 'My Yii Application';
         </div>
     </div>
 </div>
+<?=Html::jsFile('@web/js/plugins/Highcharts/4.1.7/js/highcharts.js')?>
+<?=Html::jsFile('@web/js/plugins/Highcharts/4.1.7/js/modules/exporting.js')?>
+
+
+<script type="text/javascript">
+    $(function () {
+        $('#history').highcharts({
+            title: {
+                text: '',
+                x: -20 //center
+            },
+            credits: { enabled:false }, //屏蔽右下角
+            exporting: { enabled:false }, //屏蔽右上角
+            subtitle: {
+                text: '',
+                x: -20
+            },
+            xAxis: {
+                categories: [<?=$HistoryMonthStr?>]
+            },
+            yAxis: {
+
+                title: {
+                    text: '访客/人'
+                },
+                //min: 7.5, // 这个用来控制y轴的开始刻度（最小刻度），另外还有一个表示最大刻度的max属性
+                startOnTick: false, // y轴坐标是否从某一刻度开始（这个设定与标题无关）
+                plotLines: [{
+                    value: 0,
+                    width: 1,
+                    color: '#808080'
+                }]
+            },
+            tooltip: {
+                valueSuffix: '人',
+                pointFormat: '<span style="color:{series.color}">{series.name}</span>: <b>{point.y:,.0f} 人</b><br/>',
+                shared: true
+            },
+            /*legend: {
+             layout: 'vertical',
+             align: 'right',
+             verticalAlign: 'middle',
+             borderWidth: 0
+             },*/
+            series: [{
+                name: '访客数',
+                data: [<?=$HistoryMonthNum?>]
+            }]
+        });
+    });
+</script>

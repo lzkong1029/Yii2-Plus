@@ -28,9 +28,22 @@ class IndexController extends \yii\web\Controller
             ->limit($pages->limit)
             ->orderBy('id desc')
             ->all();
+
+        $sql = "SELECT *,FROM_UNIXTIME(create_time,'%Y-%m') as period,COUNT(*) as times FROM log GROUP BY period LIMIT 12";
+        $History = Yii::$app->db->createCommand($sql)->queryAll();
+        $HistoryMonthStr = '';
+        $HistoryMonthNum = '';
+        foreach($History as $val){
+            $HistoryMonthStr .= "'".$val['period']."',";
+            $HistoryMonthNum .= $val['times'].",";
+        }
+        $HistoryMonthStr = substr($HistoryMonthStr,0,-1);
+        $HistoryMonthNum = substr($HistoryMonthNum,0,-1);
         return $this->render('welcome',[
             'log' => $log,
             'pages' => $pages,
+            'HistoryMonthStr' => $HistoryMonthStr,
+            'HistoryMonthNum' => $HistoryMonthNum,
         ]);
     }
 }

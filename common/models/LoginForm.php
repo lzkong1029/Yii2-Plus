@@ -105,7 +105,7 @@ class LoginForm extends Model
         $loc = "";
         if($location===FALSE) return "";
         if (empty($location->desc)) {
-            $loc = $location->province.$location->city.$location->district.$location->isp;
+            $loc = $location->province.'-'.$location->city.'-'.$location->district.'-'.$location->isp;
         }else{
             $loc = $location->desc;
         }

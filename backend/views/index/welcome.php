@@ -89,7 +89,7 @@ $this->title = 'My Yii Application';
                                 <td><?=$vo['username']?></td>
                                 <td><?=$vo['ip']?></td>
                                 <td><?= date('Y-m-d H:i:s',$vo['create_time'])?></td>
-                                <td><?=$vo['data']?></td>
+                                <td><?=str_replace('-','',$vo['data'])?></td>
                             </tr>
                         <?php endforeach;?>
                         </tbody>

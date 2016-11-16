@@ -42,6 +42,22 @@ use common\widgets\Alert;
 </head>
 <body class="fixed-sidebar full-height-layout gray-bg">
 <?php $this->beginBody() ?>
+<?php if((Yii::$app->controller->module->defaultRoute!="site") ||(Yii::$app->controller->module->defaultRoute=="site" && Yii::$app->controller->module->requestedRoute!=""
+        && Yii::$app->controller->module->requestedRoute!="site/login")):?>
+    <nav class="breadcrumb fix_top hidden-sm hidden-xs" style="height: 45px;">
+        <div class="pull-right">
+            <a class="btn btn-primary radius " style="line-height:1.6em;margin-top:3px" href="javascript:history.go(-1);" title="后退">
+                <span class="fa fa-reply"></span>
+            </a>
+            &nbsp;
+            <a class="btn btn-primary radius" style="line-height:1.6em;margin-top:3px" href="javascript:location.replace(location.href);" title="刷新">
+                <span class="fa fa-refresh"></span>
+            </a>
+            &nbsp;
+        </div>
+    </nav>
+<?php endif;?>
+
 <?= $content ?>
 <?php $this->endBody() ?>
 </body>

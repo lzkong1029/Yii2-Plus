@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50547
 File Encoding         : 65001
 
-Date: 2016-07-08 10:23:12
+Date: 2016-11-16 15:18:34
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -30,9 +30,9 @@ CREATE TABLE `auth_assignment` (
 -- ----------------------------
 -- Records of auth_assignment
 -- ----------------------------
-INSERT INTO `auth_assignment` VALUES ('用户管理', '2', '1467889410');
+INSERT INTO `auth_assignment` VALUES ('普通管理员', '4', '1479267383');
 INSERT INTO `auth_assignment` VALUES ('超级管理员', '1', '1467629090');
-INSERT INTO `auth_assignment` VALUES ('超级管理员', '3', '1467711334');
+INSERT INTO `auth_assignment` VALUES ('超级管理员', '2', '1479266490');
 
 -- ----------------------------
 -- Table structure for auth_item
@@ -265,50 +265,6 @@ CREATE TABLE `auth_rule` (
 INSERT INTO `auth_rule` VALUES ('编辑文章', 'O:30:\"backend\\components\\ArticleRule\":3:{s:4:\"name\";s:12:\"编辑文章\";s:9:\"createdAt\";i:1467706283;s:9:\"updatedAt\";i:1467706305;}', '1467706283', '1467706305');
 
 -- ----------------------------
--- Table structure for country
--- ----------------------------
-DROP TABLE IF EXISTS `country`;
-CREATE TABLE `country` (
-  `code` char(2) NOT NULL,
-  `name` char(52) NOT NULL,
-  `population` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`code`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of country
--- ----------------------------
-INSERT INTO `country` VALUES ('AU', 'Australia', '18886000');
-INSERT INTO `country` VALUES ('BR', 'Brazil', '170115000');
-INSERT INTO `country` VALUES ('CA', 'Canada', '1147000');
-INSERT INTO `country` VALUES ('CN', 'China', '1277558000');
-INSERT INTO `country` VALUES ('DE', 'Germany', '82164700');
-INSERT INTO `country` VALUES ('FR', 'France', '59225700');
-INSERT INTO `country` VALUES ('GB', 'United Kingdom', '59623400');
-INSERT INTO `country` VALUES ('IN', 'India', '1013662000');
-INSERT INTO `country` VALUES ('RU', 'Russia', '146934000');
-INSERT INTO `country` VALUES ('US', 'United States', '278357000');
-
--- ----------------------------
--- Table structure for goods
--- ----------------------------
-DROP TABLE IF EXISTS `goods`;
-CREATE TABLE `goods` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(100) NOT NULL DEFAULT '',
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of goods
--- ----------------------------
-INSERT INTO `goods` VALUES ('1', '11111');
-INSERT INTO `goods` VALUES ('2', '22222');
-INSERT INTO `goods` VALUES ('3', '333');
-INSERT INTO `goods` VALUES ('4', '444');
-INSERT INTO `goods` VALUES ('5', '555');
-
--- ----------------------------
 -- Table structure for log
 -- ----------------------------
 DROP TABLE IF EXISTS `log`;
@@ -319,7 +275,7 @@ CREATE TABLE `log` (
   `data` varchar(64) DEFAULT NULL,
   `create_time` varchar(32) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=utf8;
+) ENGINE=MyISAM AUTO_INCREMENT=30 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of log
@@ -351,6 +307,8 @@ INSERT INTO `log` VALUES ('24', 'admin', '127.0.0.1', '', '1467806743');
 INSERT INTO `log` VALUES ('25', 'admin', '127.0.0.1', '', '1467874541');
 INSERT INTO `log` VALUES ('26', 'test', '127.0.0.1', '', '1467885125');
 INSERT INTO `log` VALUES ('27', 'admin', '127.0.0.1', '', '1467888107');
+INSERT INTO `log` VALUES ('28', 'admin', '127.0.0.1', '', '1479280452');
+INSERT INTO `log` VALUES ('29', 'admin', '127.0.0.1', '', '1479280483');
 
 -- ----------------------------
 -- Table structure for menu
@@ -366,21 +324,22 @@ CREATE TABLE `menu` (
   PRIMARY KEY (`id`),
   KEY `parent` (`parent`),
   CONSTRAINT `menu_ibfk_1` FOREIGN KEY (`parent`) REFERENCES `menu` (`id`) ON DELETE SET NULL ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of menu
 -- ----------------------------
-INSERT INTO `menu` VALUES ('1', '用户管理', null, '/user/list', null, 0x7B2269636F6E223A202266612066612D75736572227D);
+INSERT INTO `menu` VALUES ('1', '用户中心', null, '/user/list', null, 0x7B2269636F6E223A202266612066612D75736572227D);
 INSERT INTO `menu` VALUES ('2', '权限控制', null, '/admin/default/index', '1', 0x7B2269636F6E223A202266612066612D6B6579227D);
 INSERT INTO `menu` VALUES ('3', '路由列表', '2', '/admin/route/index', '2', null);
 INSERT INTO `menu` VALUES ('4', '菜单管理', '2', '/admin/menu/index', '7', null);
 INSERT INTO `menu` VALUES ('5', '权限管理', '2', '/admin/permission/index', '3', null);
 INSERT INTO `menu` VALUES ('6', '角色管理', '2', '/admin/role/index', '4', null);
 INSERT INTO `menu` VALUES ('7', '分配权限', '2', '/admin/assignment/index', '5', null);
-INSERT INTO `menu` VALUES ('8', '用户列表', '1', '/user/list', '1', 0x7B2269636F6E223A202266612066612D7573657273227D);
 INSERT INTO `menu` VALUES ('9', '规则管理', '2', '/admin/rule/index', '6', null);
-INSERT INTO `menu` VALUES ('10', '三级列表', '8', '/user/update', null, 0x7B2269636F6E223A202266612066612D75736572227D);
+INSERT INTO `menu` VALUES ('10', '新增用户', '11', '/user/create', '2', null);
+INSERT INTO `menu` VALUES ('11', '用户管理', '1', '/user/list', '8', 0x7B2269636F6E223A202266612066612D67726F7570227D);
+INSERT INTO `menu` VALUES ('12', '用户列表', '11', '/user/list', '1', null);
 
 -- ----------------------------
 -- Table structure for migration
@@ -414,7 +373,7 @@ CREATE TABLE `user` (
   `created_at` int(11) NOT NULL,
   `updated_at` int(11) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- ----------------------------
 -- Records of user

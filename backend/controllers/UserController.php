@@ -6,22 +6,14 @@ use backend\models\Menu;
 use backend\models\PasswordForm;
 use yii\data\Pagination;
 use backend\models\User;
+use common\models\UserExt;
+use backend\models\AuthAssignment;
+use backend\components\Tree;
 
 use Yii;
 
 class UserController extends \yii\web\Controller
 {
-    //public $enableCsrfValidation = false;
-
-    /*public function beforeAction($action)
-    {
-        $action = Yii::$app->controller->module->requestedRoute;
-        if(\Yii::$app->user->can($action)){
-            return true;
-        }else{
-            echo '<div style="margin: 100px auto;text-align: center;background-color: #1ab394; color: #ffffff;width: 500px;height: 50px;line-height: 50px;border-radius: 5px;;"><h4>对不起，您现在还没获此操作的权限</h4></div>';
-        }
-    }*/
 
     public function actionIndex()
     {
@@ -31,9 +23,23 @@ class UserController extends \yii\web\Controller
     //用户列表
     public function actionList()
     {
-        Yii::$app->user->identity->username;
+        $username = Yii::$app->user->identity->username;
+        if (Yii::$app->request->post()) {
+            if($_POST['username']!=''){
+                $username = $_POST['username'];
+                $data = User::find()->where(['username'=>$username]);
+            }else{
+                $data = User::find();
+            }
+            $pages = new Pagination(['totalCount' =>$data->count(), 'pageSize' => '20']);
+            $user = $data->joinWith('usergroup')->offset($pages->offset)->limit($pages->limit)->all();
+            return $this->render('list',[
+                'user'=>$user,
+                'pages' => $pages
+            ]);
+        }
         $data = User::find();
-        $pages = new Pagination(['totalCount' =>$data->count(), 'pageSize' => '15']);
+        $pages = new Pagination(['totalCount' =>$data->count(), 'pageSize' => '20']);
         $user = $data->joinWith('usergroup')->offset($pages->offset)->limit($pages->limit)->all();
         return $this->render('list',[
             'user'=>$user,
@@ -56,19 +62,24 @@ class UserController extends \yii\web\Controller
         {
             $item_one[$value]=$value;
         }
-
         if ($model->load(Yii::$app->request->post())) {
             $post = Yii::$app->request->post();
             $model->username = $post['User']['username'];
+
+            $user = User::find()->where(['username'=>$model->username])->all();
+            if(!empty($user)){
+                \Yii::$app->getSession()->setFlash('error', '用户名已存在！');
+                return $this->redirect(['create']);
+            }
+
             $model->email = $post['User']['email'];
             $model->setPassword($post['User']['auth_key']);
             $model->generateAuthKey();
             $model->created_at = time();
             $model->save();
-            //获取插入后id
-            $user_id = $model->attributes['id'];
-            $role = $auth->createRole($post['AuthItem']['name']);                //创建角色对象
-            $auth->assign($role, $user_id);                           //添加对应关系
+            $user_id = $model->attributes['id']; //获取插入后id
+            $role = $auth->createRole($post['AuthItem']['name']);//创建角色对象
+            $auth->assign($role, $user_id);//添加对应关系
 
             return $this->redirect(['list']);
         } else {
@@ -84,7 +95,8 @@ class UserController extends \yii\web\Controller
     public function actionUpdate(){
         $item_name = Yii::$app->request->get('item_name');
         $id = Yii::$app->request->get('id');
-        $model = User::find()->joinWith('usergroup')->where(['id'=>$id])->one();
+        $model = User::find()->joinWith('usergroup')->where(['id' => $id])->one();
+
         $auth = Yii::$app->authManager;
         $item = $auth->getRoles();
         $itemArr =array();
@@ -96,6 +108,7 @@ class UserController extends \yii\web\Controller
             $item_one[$value]=$value;
         }
         $model1 = $this->findModel($id);
+
         if ($model1->load(Yii::$app->request->post())) {
             $post = Yii::$app->request->post();
             //更新密码
@@ -106,15 +119,16 @@ class UserController extends \yii\web\Controller
                 $model1->auth_key = $post['User']['auth_key'];
             }
             $model1->save($post);
+
             //分配角色
-            $role = $auth->createRole($post['AuthAssignment']['item_name']);                //创建角色对象
-            $user_id = $id;                                             //获取用户id，此处假设用户id=1
-            $auth->revokeAll($user_id);
-            $auth->assign($role, $user_id);                           //添加对应关系
-
-            return $this->redirect(['user/update', 'id' => $model1->id]);
+            if(isset($post['AuthAssignment'])){
+                $role = $auth->createRole($post['AuthAssignment']['item_name']); //创建角色对象
+                $user_id = $id;//获取用户id
+                $auth->revokeAll($user_id);
+                $auth->assign($role, $user_id);//添加对应关系
+            }
+            return $this->redirect(['user/list']);
         }
-
         return $this->render('update',[
             'model' => $model,
             'item' => $item_one
@@ -123,7 +137,18 @@ class UserController extends \yii\web\Controller
     //删除用户
     public function actionDelete($id)
     {
-        $this->findModel($id)->delete();
+        $connection=Yii::$app->db;
+        $transaction=$connection->beginTransaction();
+        try
+        {
+            $connection->createCommand()->delete("user", "id = '$id'")->execute();
+            $connection->createCommand()->delete("auth_assignment", "user_id = '$id'")->execute();
+            $transaction->commit();
+        }
+        catch(Exception $ex)
+        {
+            $transaction->rollBack();
+        }
         return $this->redirect(['list']);
     }
 

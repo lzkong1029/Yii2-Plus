@@ -77,10 +77,9 @@ class LoginForm extends Model
     }
     //登录记录
     public function loginLog(){
-        $Log = new Log();
         $userIP = Yii::$app->request->userIP;
         Yii::$app->db->createCommand()->insert(
-            'Log', [
+            'log', [
             'username' => $this->username,
             'create_time' => time(),
             'ip'=>$userIP,

@@ -81,6 +81,24 @@ return [
             'class' => 'yii\rbac\DbManager', // 使用数据库管理配置文件
             "defaultRoles" => ["guest"],
         ],
+
+        //禁用加载自带的 jquery 和 bootstrap.css 文件
+        'assetManager'=>[
+            'bundles'=>[
+                'yii\bootstrap\BootstrapAsset' => [
+                    'css' => []
+                ],
+                'yii\web\JqueryAsset' => [
+                    'sourcePath' => null,
+                    'js' => []
+                ],
+            ],
+
+        ]
+
     ],
+
+
+
     'params' => $params,
 ];

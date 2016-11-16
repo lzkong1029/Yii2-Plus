@@ -20,8 +20,6 @@ class IndexController extends \yii\web\Controller
 
     public function actionWelcome()
     {
-        //$action = Yii::$app->controller->module->requestedRoute;
-        //var_dump(\Yii::$app->user->can('/site/index'));exit;
         //最近登录记录
         $log = Log::find()->limit(20)->orderBy('id desc')->asArray()->all();
         return $this->render('welcome',[

@@ -20,10 +20,17 @@ class IndexController extends \yii\web\Controller
 
     public function actionWelcome()
     {
-        //最近登录记录
-        $log = Log::find()->limit(20)->orderBy('id desc')->asArray()->all();
+        //登录记录
+        $query = Log::find();
+        $count = $query->count();
+        $pages = new Pagination(['totalCount' => $count,'pageSize' => '10']);
+        $log = $query->offset($pages->offset)
+            ->limit($pages->limit)
+            ->orderBy('id desc')
+            ->all();
         return $this->render('welcome',[
             'log' => $log,
+            'pages' => $pages,
         ]);
     }
 }

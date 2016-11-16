@@ -4,12 +4,14 @@
 use yii\helpers\Html;
 use yii\bootstrap\ActiveForm;
 use yii\helpers\Url;
+use yii\widgets\LinkPager;
+
 $this->title = 'My Yii Application';
 ?>
 <div class="wrapper wrapper-content">
     <div class="row">
         <?php if(\Yii::$app->user->can('/site/index')):?> <!--判断是否有‘/site/index’权限，有则显示，无则隐藏-->
-        <div class="col-sm-3">
+        <!--<div class="col-sm-3">
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
                     <span class="label label-success pull-right">月</span>
@@ -22,9 +24,9 @@ $this->title = 'My Yii Application';
                     <small>总收入</small>
                 </div>
             </div>
-        </div>
+        </div>-->
         <?php endif;?>
-        <div class="col-sm-3">
+        <!--<div class="col-sm-3">
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
                     <span class="label label-info pull-right">全年</span>
@@ -37,32 +39,32 @@ $this->title = 'My Yii Application';
                     <small>新订单</small>
                 </div>
             </div>
-        </div>
-        <div class="col-sm-3">
+        </div>-->
+        <div class="col-sm-6">
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
-                    <span class="label label-primary pull-right">今天</span>
+                    <span class="label label-primary pull-right">历史</span>
                     <h5>访客</h5>
                 </div>
                 <div class="ibox-content">
-                    <h1 class="no-margins">106,120</h1>
-                    <div class="stat-percent font-bold text-navy">44% <i class="fa fa-level-up"></i>
-                    </div>
-                    <small>新访客</small>
+                    <h1 class="no-margins"><?=\backend\components\Helper::getHistoryVisNum()?></h1>
+                    <!--<div class="stat-percent font-bold text-navy">44% <i class="fa fa-level-up"></i>
+                    </div>-->
+                    <small>访客</small>
                 </div>
             </div>
         </div>
-        <div class="col-sm-3">
+        <div class="col-sm-6">
             <div class="ibox float-e-margins">
                 <div class="ibox-title">
                     <span class="label label-danger pull-right">最近一个月</span>
                     <h5>活跃用户</h5>
                 </div>
                 <div class="ibox-content">
-                    <h1 class="no-margins">80,600</h1>
-                    <div class="stat-percent font-bold text-danger">38% <i class="fa fa-level-down"></i>
-                    </div>
-                    <small>12月</small>
+                    <h1 class="no-margins"><?=\backend\components\Helper::getMonthHistoryVisNum()?></h1>
+                    <!--<div class="stat-percent font-bold text-danger">38% <i class="fa fa-level-down"></i>
+                    </div>-->
+                    <small><?= date('m')?>月</small>
                 </div>
             </div>
         </div>
@@ -94,6 +96,16 @@ $this->title = 'My Yii Application';
                         <?php endforeach;?>
                         </tbody>
                     </table>
+                    <!--分页-->
+                    <div class="f-r">
+                        <?= LinkPager::widget([
+                            'pagination'=>$pages,
+                            'firstPageLabel' => '首页',
+                            'nextPageLabel' => '下一页',
+                            'prevPageLabel' => '上一页',
+                            'lastPageLabel' => '末页',
+                        ]) ?>
+                    </div>
                 </div>
             </div>
         </div>

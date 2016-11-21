@@ -62,7 +62,7 @@ $this->title = 'Y+';
                                                         <li><!--三级菜单-->
                                                             <a class="J_menuItem" href="<?= Url::toRoute($v3['route']);?>" data-index="0"><?= $v3['name']?></a>
                                                         </li>
-                                                    <? endforeach;?>
+                                                    <?php endforeach;?>
                                                     </ul>
                                                 <?php  endif;?>
                                             </li>
@@ -70,8 +70,8 @@ $this->title = 'Y+';
                                             <li><!--二级菜单-->
                                                 <a class="J_menuItem" href="<?= Url::toRoute($v2['route']);?>" data-index="0"><?= $v2['name']?></a>
                                             </li>
-                                        <?php  endif;?>
-                                    <? endforeach;?>
+                                        <?php endif;?>
+                                    <?php endforeach;?>
                                 </ul>
                             <?php endif;?>
 

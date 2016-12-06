@@ -69,13 +69,12 @@ class Menu extends \yii\db\ActiveRecord
     public function  getLeftMenuList(){
         $uid = Yii::$app->user->identity->getId();
         $auth = Yii::$app->authManager;
-        $Roles = $auth->getRolesByUser($uid);
-        //var_dump($Roles);exit;
-
+        /*$Roles = $auth->getRolesByUser($uid);
         foreach($Roles as $vo){
             $name = $vo->name;
         }
-        $Permission = $auth->getPermissionsByRole($name);
+        $Permission = $auth->getPermissionsByRole($name);*/
+        $Permission = $auth->getPermissionsByUser($uid);
         $RolesList = '';
         foreach($Permission as $vo){
             $RolesList .= "'".$vo->name."',";

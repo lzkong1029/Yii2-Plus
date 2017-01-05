@@ -1,5 +1,8 @@
 # Yii2+
-Yii2 + Bootstrap搭建的后台管理系统，集成用户中心模块和RBAC权限管理模块,前端页面采用H+框架，集成Yii2 admin。
+Yii2 + Bootstrap搭建的后台管理系统，集成用户中心模块和RBAC权限管理模块,前端页面采用H+框架，集成Yii2 admin。<br>
+
+# Yii2 Rbac
+另外有个是没有使用第三方Yii2 admin的权限管理：https://github.com/lzkong1029/Yii2-Rbac ,两个看喜好而选用。<br>
 
 #安装
 1.使用Git clone到本地后；<br>

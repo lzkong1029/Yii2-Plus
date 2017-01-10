@@ -79,6 +79,7 @@ class LoginForm extends Model
     public function loginLog(){
         $userIP = Yii::$app->request->userIP;
         $data = $this->getIPLoc_sina($userIP);
+
         //$data = '';
         Yii::$app->db->createCommand()->insert(
             'log', [
@@ -101,9 +102,9 @@ class LoginForm extends Model
         $location = curl_exec($ch);
         $location = json_decode($location);
         curl_close($ch);
-
         $loc = "";
         if($location===FALSE) return "";
+        if($location < 0) return "";
         if (empty($location->desc)) {
             $loc = $location->province.'-'.$location->city.'-'.$location->district.'-'.$location->isp;
         }else{

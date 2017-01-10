@@ -81,6 +81,9 @@ class Menu extends \yii\db\ActiveRecord
         }
         $RolesList = substr($RolesList,0,-1);
 
+        if($RolesList == ''){
+            $RolesList = "'/index/welcome','/site/index'";
+        }
         $menu = Yii::$app->db->createCommand("SELECT * FROM `menu` WHERE route IN ($RolesList)  ORDER BY `order` ASC")->queryAll();
         $menu = self::list_to_tree2($menu,'id','parent');
         return $menu;
